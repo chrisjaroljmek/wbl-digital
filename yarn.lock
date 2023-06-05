@@ -1940,7 +1940,7 @@
     process "^0.11.10"
     util "^0.12.4"
 
-"@storybook/builder-vite@7.0.18", "@storybook/builder-vite@^7.0.18":
+"@storybook/builder-vite@7.0.18":
   version "7.0.18"
   resolved "https://registry.yarnpkg.com/@storybook/builder-vite/-/builder-vite-7.0.18.tgz#f9fb19c89bc084f5e1b54384faa1e2cb2143075d"
   integrity sha512-Qze6/PwUJq+z776dBoG5uinAEVZyPalZIaU/VOWpTrN8L9FQbL0+HDrZU2E/BMNW+ZfnSjF3V2USLyiutsC1Tw==

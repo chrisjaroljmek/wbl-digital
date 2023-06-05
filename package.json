@@ -20,7 +20,6 @@
     "@storybook/addon-interactions": "^7.0.18",
     "@storybook/addon-links": "^7.0.18",
     "@storybook/blocks": "^7.0.18",
-    "@storybook/builder-vite": "^7.0.18",
     "@storybook/react": "^7.0.18",
     "@storybook/react-vite": "^7.0.18",
     "@storybook/testing-library": "^0.0.14-next.2",
