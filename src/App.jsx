@@ -1,5 +1,5 @@
 import "./App.css";
 
 export function App() {
-  return <div className="text-red-500">App</div>;
+  return <div className="text-primary-a">App</div>;
 }

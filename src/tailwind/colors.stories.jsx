@@ -9,8 +9,6 @@ const Stories = {
 
 export default Stories;
 
-console.log(config);
-
 const Color = (props) => (
   <div className="inline-block text-center text-xs">
     <div
