@@ -55,9 +55,6 @@ export default {
           a: "#FF42B3",
           b: "#7D60FF",
         },
-        dark: {
-          500: "#16171A",
-        },
       },
     },
   },
