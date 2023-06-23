@@ -5,11 +5,31 @@ export function Header() {
   };
 
   return (
-    <header className="fixed text-white">
-      <button onClick={() => scrollToSection("2")}>About us</button>
-      <button onClick={() => scrollToSection("3")}>What we do</button>
-      <button onClick={() => scrollToSection("4")}>Our clients</button>
-      <button onClick={() => scrollToSection("5")}>Get in touch</button>
+    <header className="fixed text-white flex items-center justify-end space-x-16 w-full">
+      <button
+        className="text-green uppercase"
+        onClick={() => scrollToSection("2")}
+      >
+        About us
+      </button>
+      <button
+        className="text-blue uppercase"
+        onClick={() => scrollToSection("3")}
+      >
+        What we do
+      </button>
+      <button
+        className="text-orange uppercase"
+        onClick={() => scrollToSection("4")}
+      >
+        Our clients
+      </button>
+      <button
+        className="text-white uppercase border-4 border-red px-8 py-4 rounded-full"
+        onClick={() => scrollToSection("5")}
+      >
+        Get in touch
+      </button>
     </header>
   );
 }
