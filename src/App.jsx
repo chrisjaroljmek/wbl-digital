@@ -4,10 +4,9 @@ import { Logo } from "./components/Logo";
 
 export function App() {
   return (
-    <div className="bg-black text-white">
+    <div>
       <Header />
       <section id="1" className="h-screen">
-        <h2>Landing Page</h2>
         <Logo size="xl" />
       </section>
       <section id="2" className="h-screen">
