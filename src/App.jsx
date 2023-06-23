@@ -11,18 +11,10 @@ export function App() {
       <Section id="1" title="Landing Page">
         <Logo size="xl" />
       </Section>
-      <section id="2" className="bg-black h-screen">
-        <h2 className="text-white">About us</h2>
-      </section>
-      <section id="3" className="bg-black h-screen">
-        <h2 className="text-white">What we do</h2>
-      </section>
-      <section id="4" className="bg-black h-screen">
-        <h2 className="text-white">Our clients</h2>
-      </section>
-      <section id="5" className="bg-black h-screen">
-        <h2 className="text-white">Get in touch</h2>
-      </section>
+      <Section id="2" title="About Us" />
+      <Section id="3" title="What We Do" />
+      <Section id="4" title="Our Clients" />
+      <Section id="5" title="Get In Touch" />
     </div>
   );
 }
