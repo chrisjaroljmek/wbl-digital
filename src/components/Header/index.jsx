@@ -5,7 +5,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed">
+    <header className="fixed text-white">
       <button onClick={() => scrollToSection("2")}>About us</button>
       <button onClick={() => scrollToSection("3")}>What we do</button>
       <button onClick={() => scrollToSection("4")}>Our clients</button>
