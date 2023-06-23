@@ -4,23 +4,23 @@ import { Logo } from "./components/Logo";
 
 export function App() {
   return (
-    <div>
+    <div className="bg-black text-white">
       <Header />
-      <section id="1" className="bg-black h-screen">
-        <h2 className="text-white">Landing Page</h2>
+      <section id="1" className="h-screen">
+        <h2>Landing Page</h2>
         <Logo size="xl" />
       </section>
-      <section id="2" className="bg-black h-screen">
-        <h2 className="text-white">About us</h2>
+      <section id="2" className="h-screen">
+        <h2>About us</h2>
       </section>
-      <section id="3" className="bg-black h-screen">
-        <h2 className="text-white">What we do</h2>
+      <section id="3" className="h-screen">
+        <h2>What we do</h2>
       </section>
-      <section id="4" className="bg-black h-screen">
-        <h2 className="text-white">Our clients</h2>
+      <section id="4" className="h-screen">
+        <h2>Our clients</h2>
       </section>
-      <section id="5" className="bg-black h-screen">
-        <h2 className="text-white">Get in touch</h2>
+      <section id="5" className="h-screen">
+        <h2>Get in touch</h2>
       </section>
     </div>
   );
