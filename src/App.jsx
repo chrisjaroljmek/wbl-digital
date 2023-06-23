@@ -1,15 +1,16 @@
 import "./App.css";
+
 import { Header } from "./components/Header";
 import { Logo } from "./components/Logo";
+import { Section } from "./components/Section";
 
 export function App() {
   return (
     <div>
       <Header />
-      <section id="1" className="bg-black h-screen">
-        <h2 className="text-white">Landing Page</h2>
+      <Section id="1" title="Landing Page">
         <Logo size="xl" />
-      </section>
+      </Section>
       <section id="2" className="bg-black h-screen">
         <h2 className="text-white">About us</h2>
       </section>
