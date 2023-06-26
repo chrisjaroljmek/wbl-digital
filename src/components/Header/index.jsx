@@ -7,19 +7,19 @@ export function Header() {
   return (
     <header className="fixed text-white flex items-center justify-end space-x-16 w-full">
       <button
-        className="text-green uppercase"
+        className="text-green uppercase hover:underline underline-offset-8"
         onClick={() => scrollToSection("2")}
       >
         About us
       </button>
       <button
-        className="text-blue uppercase"
+        className="text-blue uppercase hover:underline underline-offset-8"
         onClick={() => scrollToSection("3")}
       >
         What we do
       </button>
       <button
-        className="text-orange uppercase"
+        className="text-orange uppercase hover:underline underline-offset-8"
         onClick={() => scrollToSection("4")}
       >
         Our clients
