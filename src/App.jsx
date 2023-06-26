@@ -53,7 +53,14 @@ export function App() {
     <div>
       <Header currentSection={currentSection} />
       <Section id="1">
-        <Logo size="xl" />
+        <div className="flex items-center">
+          <Logo size="xl" />
+          <div className="flex flex-col text-6xl pt-24 space-y-2">
+            <span>Purposeful Products</span>
+            <span>Lorem ipsum authenticity</span>
+            <span>Web Designs</span>
+          </div>
+        </div>
       </Section>
       <Section id="2">
         <SectionHeader className="text-green" />
