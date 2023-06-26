@@ -55,10 +55,10 @@ export function App() {
       <Section id="1">
         <div className="flex items-center justify-center h-full">
           <Logo size="xl" />
-          <div className="flex flex-col text-6xl pt-24 space-y-2">
-            <span>Purposeful Products</span>
+          <div className="flex flex-col text-6xl pt-24 space-y-2 font-light tracking-wider">
+            <span>Purposeful products</span>
             <span>Lorem ipsum authenticity</span>
-            <span>Web Designs</span>
+            <span>Web designs</span>
           </div>
         </div>
       </Section>
