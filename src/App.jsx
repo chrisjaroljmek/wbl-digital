@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+
+import { Dot } from "./components/Dot";
 import { Header } from "./components/Header";
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
@@ -56,9 +58,18 @@ export function App() {
         <div className="flex items-center justify-center h-full">
           <Logo size="xl" />
           <div className="flex flex-col text-6xl pt-24 space-y-2 font-light tracking-wider">
-            <span>Purposeful products</span>
-            <span>Lorem ipsum authenticity</span>
-            <span>Web designs</span>
+            <div className="flex items-end">
+              <span>Purposeful products</span>
+              <Dot color="green" />
+            </div>
+            <div className="flex items-end">
+              <span>Lorem ipsum</span>
+              <Dot color="blue" />
+            </div>
+            <div className="flex items-end">
+              <span>Web designs</span>
+              <Dot color="red" />
+            </div>
           </div>
         </div>
       </Section>
