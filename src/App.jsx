@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { Logo } from "./components/Logo";
+import { Section } from "./components/Section";
 
 import "./App.css";
 
@@ -49,22 +50,14 @@ export function App() {
 
   return (
     <div>
-      <Header currentSection={currentSection} />
-      <section id="1" className="h-screen">
+    <Header currentSection={currentSection} />
+      <Section id="1" title="Landing Page">
         <Logo size="xl" />
-      </section>
-      <section id="2" className="h-screen">
-        <h2>About us</h2>
-      </section>
-      <section id="3" className="h-screen">
-        <h2>What we do</h2>
-      </section>
-      <section id="4" className="h-screen">
-        <h2>Our clients</h2>
-      </section>
-      <section id="5" className="h-screen">
-        <h2>Get in touch</h2>
-      </section>
+      </Section>
+      <Section id="2" title="About Us" />
+      <Section id="3" title="What We Do" />
+      <Section id="4" title="Our Clients" />
+      <Section id="5" title="Get In Touch" />
     </div>
   );
 }
