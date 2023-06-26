@@ -47,11 +47,9 @@ export function App() {
     };
   }, []);
 
-  console.log("currentSection", currentSection);
-
   return (
     <div>
-      <Header />
+      <Header currentSection={currentSection} />
       <section id="1" className="h-screen">
         <Logo size="xl" />
       </section>
