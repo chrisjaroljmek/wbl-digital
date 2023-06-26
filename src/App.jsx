@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
+import { SectionHeader } from "./components/SectionHeader";
 
 import "./App.css";
 
@@ -50,11 +51,13 @@ export function App() {
 
   return (
     <div>
-    <Header currentSection={currentSection} />
-      <Section id="1" title="Landing Page">
+      <Header currentSection={currentSection} />
+      <Section id="1">
         <Logo size="xl" />
       </Section>
-      <Section id="2" title="About Us" />
+      <Section id="2">
+        <SectionHeader className="text-green" />
+      </Section>
       <Section id="3" title="What We Do" />
       <Section id="4" title="Our Clients" />
       <Section id="5" title="Get In Touch" />
