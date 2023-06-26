@@ -1,4 +1,7 @@
-export function Header() {
+import classnames from "classnames";
+
+export function Header(props) {
+  const { currentSection } = props;
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: "smooth" });
@@ -7,19 +10,28 @@ export function Header() {
   return (
     <header className="fixed text-white flex items-center justify-end space-x-16 w-full">
       <button
-        className="text-green uppercase"
+        className={classnames(
+          "uppercase hover:underline underline-offset-8",
+          currentSection === "2" && "text-green underline"
+        )}
         onClick={() => scrollToSection("2")}
       >
         About us
       </button>
       <button
-        className="text-blue uppercase"
+        className={classnames(
+          "uppercase hover:underline underline-offset-8",
+          currentSection === "3" && "text-blue underline"
+        )}
         onClick={() => scrollToSection("3")}
       >
         What we do
       </button>
       <button
-        className="text-orange uppercase"
+        className={classnames(
+          "uppercase hover:underline underline-offset-8",
+          currentSection === "4" && "text-orange underline"
+        )}
         onClick={() => scrollToSection("4")}
       >
         Our clients
