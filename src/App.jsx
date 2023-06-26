@@ -53,7 +53,7 @@ export function App() {
     <div>
       <Header currentSection={currentSection} />
       <Section id="1">
-        <div className="flex items-center">
+        <div className="flex items-center justify-center h-full">
           <Logo size="xl" />
           <div className="flex flex-col text-6xl pt-24 space-y-2">
             <span>Purposeful Products</span>

@@ -18,7 +18,7 @@ export function Logo(props) {
       imageSize = "w-20 h-20";
       break;
     case "xl":
-      imageSize = "w-[768px] h-[768px]";
+      imageSize = "w-[768px]";
       break;
     default:
       imageSize = "w-16 h-16";
