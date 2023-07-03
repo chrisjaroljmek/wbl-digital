@@ -1,6 +1,5 @@
+import logo from "../../assets/images/wbl.png";
 import PropTypes from "prop-types";
-
-import logo from "../../assets/wbl.png";
 
 export function Logo(props) {
   const { size } = props;
