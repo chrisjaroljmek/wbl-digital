@@ -5,6 +5,7 @@ import { Header } from "./components/Header";
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
 import { SectionHeader } from "./components/SectionHeader";
+import { Shape } from "./components/Shape";
 
 import "./App.css";
 
@@ -84,6 +85,7 @@ export function App() {
           sub
           text="We think of a brand as a promise and deliver digital brand experiences that users can believe in."
         />
+        <Shape shape="circle" />
       </Section>
       <Section id="3" title="What We Do" />
       <Section id="4" title="Our Clients" />
