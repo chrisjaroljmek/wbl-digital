@@ -56,7 +56,7 @@ export function App() {
         <Logo size="xl" />
       </Section>
       <Section id="2">
-        <SectionHeader className="text-green" />
+        <SectionHeader text="We produce websites and style brands." />
       </Section>
       <Section id="3" title="What We Do" />
       <Section id="4" title="Our Clients" />

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import logo from "../../assets/wbl.png";
 
 export function Logo(props) {
@@ -25,3 +27,11 @@ export function Logo(props) {
   }
   return <img alt="logo" className={imageSize} src={logo} />;
 }
+
+Logo.propTypes = {
+  size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]).isRequired,
+};
+
+Logo.defaultProps = {
+  size: "md",
+};
