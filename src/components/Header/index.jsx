@@ -1,7 +1,9 @@
+import PropTypes from "prop-types";
 import classnames from "classnames";
 
 export function Header(props) {
   const { currentSection } = props;
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: "smooth" });
@@ -45,3 +47,7 @@ export function Header(props) {
     </header>
   );
 }
+
+Header.propTypes = {
+  currentSection: PropTypes.string.isRequired,
+};
