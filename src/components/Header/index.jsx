@@ -11,7 +11,9 @@ export function Header(props) {
 
   const Button = (props) => {
     const { label, color, sectionId } = props;
-
+    console.log(color);
+    console.log(sectionId, "sectionId");
+    console.log(currentSection, "currentSection");
     return (
       <button
         className={classnames(

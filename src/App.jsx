@@ -75,6 +75,15 @@ export function App() {
       </Section>
       <Section id="2">
         <SectionHeader text="We produce websites and style brands." />
+        <SectionHeader text="We add purpose." />
+        <SectionHeader
+          sub
+          text="We think of a brand as a promise and deliver digital brand experiences that users can believe in."
+        />
+        <SectionHeader
+          sub
+          text="We think of a brand as a promise and deliver digital brand experiences that users can believe in."
+        />
       </Section>
       <Section id="3" title="What We Do" />
       <Section id="4" title="Our Clients" />
