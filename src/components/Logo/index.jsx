@@ -1,4 +1,4 @@
-import logo from "../../assets/wbl.png";
+import logo from "../../assets/images/wbl.png";
 
 export function Logo(props) {
   const { size } = props;
