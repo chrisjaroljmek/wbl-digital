@@ -27,6 +27,8 @@ export function Header(props) {
     );
   };
 
+  console.log(currentSection);
+
   return (
     <header
       className={classnames(
@@ -34,13 +36,17 @@ export function Header(props) {
         className
       )}
     >
-      {currentSection !== "1" ? (
-        <div className="w-[120px] h-[60px] flex items-center">
-          <Logo size="md" />
-        </div>
-      ) : (
-        <div></div>
-      )}
+      <div
+        className={classnames(
+          "w-[120px] h-[60px] flex items-center transition-opacity duration-1000 ease-in",
+          currentSection === "1" && "opacity-0",
+          currentSection !== "1" && "opacity-1 cursor-pointer"
+        )}
+        onClick={() => scrollToSection("1")}
+      >
+        <Logo size="md" />
+      </div>
+
       <div className="space-x-20 text-xl text-white">
         <Button label="About Us" color="green" sectionId="2" />
         <Button label="What We Do" color="blue" sectionId="3" />
