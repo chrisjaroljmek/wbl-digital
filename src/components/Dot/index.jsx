@@ -7,7 +7,7 @@ export function Dot(props) {
   return (
     <div
       className={classnames(
-        "h-3 w-3 rounded-full  ml-[5px] mb-[5px]",
+        "h-3 w-3 rounded-full  ml-[6px] mb-[8px]",
         color === "green" && "bg-green",
         color === "blue" && "bg-darkBlue",
         color === "red" && "bg-red",
