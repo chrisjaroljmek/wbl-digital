@@ -8,8 +8,8 @@ export function ColorToggle(props) {
 
   return (
     <div className={classnames("flex space-x-2", className)}>
-      <img className="h-12" src={sun} alt="light" />
-      <img className="h-12" src={moon} alt="dark" />
+      <img className="h-12 cursor-pointer" src={sun} alt="light" />
+      <img className="h-12 cursor-pointer" src={moon} alt="dark" />
     </div>
   );
 }
