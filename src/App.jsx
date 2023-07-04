@@ -40,7 +40,7 @@ export function App() {
 
   return (
     <div>
-      <Interface />
+      <Interface currentSection={currentSection} />
       <Section id="1">
         <div className="flex items-center justify-center h-full pb-8">
           <Logo size="xl" />

@@ -13,7 +13,7 @@ export function Logo(props) {
       imageSize = "w-12 h-12";
       break;
     case "md":
-      imageSize = "w-16 h-16";
+      imageSize = "w-[140px]";
       break;
     case "lg":
       imageSize = "w-20 h-20";
