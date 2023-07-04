@@ -38,7 +38,7 @@ export function Header(props) {
     >
       <div
         className={classnames(
-          "w-[120px] h-[60px] flex items-center transition-opacity duration-1000 ease-in",
+          "w-[120px] h-[60px] flex items-center transition-opacity duration-1000 ease-in-out",
           currentSection === "1" && "opacity-0",
           currentSection !== "1" && "opacity-1 cursor-pointer"
         )}
