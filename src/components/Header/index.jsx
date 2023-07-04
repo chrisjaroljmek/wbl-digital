@@ -12,7 +12,7 @@ export function Header(props) {
   };
 
   const Button = (props) => {
-    const { label, color, sectionId } = props;
+    const { label, color, currentSection, sectionId } = props;
 
     return (
       <button
@@ -26,8 +26,6 @@ export function Header(props) {
       </button>
     );
   };
-
-  console.log(currentSection);
 
   return (
     <header
@@ -48,9 +46,24 @@ export function Header(props) {
       </div>
 
       <div className="space-x-20 text-xl text-white">
-        <Button label="About Us" color="green" sectionId="2" />
-        <Button label="What We Do" color="blue" sectionId="3" />
-        <Button label="Our Clients" color="orange" sectionId="4" />
+        <Button
+          label="About Us"
+          color="green"
+          sectionId="2"
+          currentSection={currentSection}
+        />
+        <Button
+          label="What We Do"
+          color="blue"
+          sectionId="3"
+          currentSection={currentSection}
+        />
+        <Button
+          label="Our Clients"
+          color="orange"
+          sectionId="4"
+          currentSection={currentSection}
+        />
         <button
           className="text-white uppercase border-4 border-red px-12 py-5 rounded-full"
           onClick={() => scrollToSection("5")}
