@@ -60,7 +60,7 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section id="2">
+      <Section id="2" className="pt-[124px]">
         <SectionHeader text="We produce websites and style brands." />
         <SectionHeader text="We add purpose." />
         <SectionHeader
@@ -73,9 +73,9 @@ export function App() {
         />
         <Shape shape="circle" />
       </Section>
-      <Section id="3" title="What We Do" />
-      <Section id="4" title="Our Clients" />
-      <Section id="5" title="Get In Touch" />
+      <Section id="3" title="What We Do" className="pt-[124px]" />
+      <Section id="4" title="Our Clients" className="pt-[124px]" />
+      <Section id="5" title="Get In Touch" className="pt-[124px]" />
     </div>
   );
 }
