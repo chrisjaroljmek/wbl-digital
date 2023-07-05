@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import { Dot } from "./components/Dot";
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
 import { SectionHeader } from "./components/SectionHeader";
@@ -42,20 +41,20 @@ export function App() {
     <div>
       <Interface currentSection={currentSection} />
       <Section id="1">
-        <div className="flex items-center justify-center h-full pb-8">
+        <div className="flex items-center justify-center h-full">
           <Logo className="w-4/12" />
-          <div className="flex flex-col text-6xl pt-28 space-y-4 tracking-wide ml-4">
+          <div className="flex flex-col ml-4 md:ml-2 space-y-3 pt-20 text-[2.5vw] leading-none tracking-wide whitespace-nowrap">
             <div className="flex items-end">
-              <span>Engaging web experiences</span>
-              <Dot color="green" />
+              Engaging web experiences
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-green lg:mb-1.5 md:mb-1 lg:ml-1 md:ml-1"></span>
             </div>
             <div className="flex items-end">
               <span>Purposeful digital solutions</span>
-              <Dot color="blue" />
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-darkBlue lg:mb-1.5 md:mb-1 lg:ml-1 md:ml-1"></span>
             </div>
             <div className="flex items-end">
               <span>Empowering web design</span>
-              <Dot color="red" />
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-red lg:mb-1.5 md:mb-1 lg:ml-1 md:ml-1"></span>
             </div>
           </div>
         </div>
