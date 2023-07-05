@@ -43,7 +43,7 @@ export function App() {
       <Interface currentSection={currentSection} />
       <Section id="1">
         <div className="flex items-center justify-center h-full pb-8">
-          <Logo size="xl" />
+          <Logo className="w-4/12" />
           <div className="flex flex-col text-6xl pt-28 space-y-4 tracking-wide ml-4">
             <div className="flex items-end">
               <span>Engaging web experiences</span>
