@@ -42,19 +42,19 @@ export function App() {
       <Interface currentSection={currentSection} />
       <Section id="1">
         <div className="flex items-center justify-center h-full">
-          <Logo className="w-4/12" />
-          <div className="flex flex-col ml-4 md:ml-2 space-y-3 pt-20 text-[2.5vw] leading-none tracking-wide whitespace-nowrap">
+          <Logo className="w-4/12 mr-[1.5vw]" />
+          <div className="flex flex-col justify-center h-full space-y-[1vw] text-[2.5vw] leading-none tracking-wide whitespace-nowrap pt-[4.5vw]">
             <div className="flex items-end">
               Engaging web experiences
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-green lg:mb-1.5 md:mb-1 lg:ml-1 md:ml-1"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-green mb-[0.4vw] ml-[0.2vw]"></span>
             </div>
             <div className="flex items-end">
               <span>Purposeful digital solutions</span>
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-darkBlue lg:mb-1.5 md:mb-1 lg:ml-1 md:ml-1"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-darkBlue mb-[0.4vw] ml-[0.2vw]"></span>
             </div>
             <div className="flex items-end">
               <span>Empowering web design</span>
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-red lg:mb-1.5 md:mb-1 lg:ml-1 md:ml-1"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-red mb-[0.4vw] ml-[0.2vw]"></span>
             </div>
           </div>
         </div>
