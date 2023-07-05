@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -9,11 +10,12 @@ export default {
         green: "#8CF507",
         blue: "#36FFD6",
         darkBlue: "#3118FF",
-        red: "#b53523",
+        red: "#FF2912",
         orange: "#FF9A01",
         grey: "#B9B9B9",
       },
     },
   },
   plugins: [],
+  safelist: ["text-green", "text-orange", "text-blue"],
 };
