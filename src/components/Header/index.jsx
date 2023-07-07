@@ -11,21 +11,11 @@ export function Header(props) {
     section.scrollIntoView({ behavior: "smooth" });
   };
 
-  const Button = (props) => {
-    const { label, color, currentSection, sectionId } = props;
-
-    return (
-      <button
-        className={classnames(
-          "uppercase hover:underline underline-offset-8",
-          currentSection === sectionId && `text-${color} underline`
-        )}
-        onClick={() => scrollToSection(sectionId)}
-      >
-        {label}
-      </button>
-    );
-  };
+  const buttons = [
+    { sectionId: "2", label: "About Us", color: "green" },
+    { sectionId: "3", label: "What We Do", color: "blue" },
+    { sectionId: "4", label: "Our Clients", color: "orange" },
+  ];
 
   return (
     <header
@@ -44,26 +34,18 @@ export function Header(props) {
       >
         <Logo size="md" />
       </div>
-
       <div className="space-x-20 text-xl text-white">
-        <Button
-          label="About Us"
-          color="green"
-          sectionId="2"
-          currentSection={currentSection}
-        />
-        <Button
-          label="What We Do"
-          color="blue"
-          sectionId="3"
-          currentSection={currentSection}
-        />
-        <Button
-          label="Our Clients"
-          color="orange"
-          sectionId="4"
-          currentSection={currentSection}
-        />
+        {buttons.map(({ sectionId, label, color }) => (
+          <button
+            className={classnames(
+              "uppercase hover:underline underline-offset-8",
+              currentSection === sectionId && `text-${color} underline`
+            )}
+            onClick={() => scrollToSection(sectionId)}
+          >
+            {label}
+          </button>
+        ))}
         <button
           className="text-white uppercase border-4 border-red px-12 py-5 rounded-full"
           onClick={() => scrollToSection("5")}
