@@ -1,5 +1,9 @@
+@font-face {
+  font-family: inter;
+  src: url("./inter.ttf");
+}
+
 body {
   background-color: #16171a;
   color: white;
-  font-family: Inter;
 }
