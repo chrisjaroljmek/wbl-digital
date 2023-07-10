@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import classnames from "classnames";
+
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
 import { SectionHeader } from "./components/SectionHeader";
@@ -11,6 +13,7 @@ import "./App.css";
 
 export function App() {
   const [currentSection, setCurrentSection] = useState("");
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {
@@ -38,8 +41,12 @@ export function App() {
   }, []);
 
   return (
-    <div>
-      <Interface currentSection={currentSection} />
+    <div className={classnames(darkMode && "bg-dark-black")}>
+      <Interface
+        currentSection={currentSection}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
       <Section id="1">
         <div className="flex items-center justify-center h-full">
           <Logo className="w-4/12 mr-[1.5vw]" />

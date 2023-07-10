@@ -3,13 +3,17 @@ import { Header } from "../../components/Header";
 import { Scroll } from "../../components/Scroll";
 
 export function Interface(props) {
-  const { currentSection } = props;
+  const { currentSection, darkMode, setDarkMode } = props;
 
   return (
     <div className="flex flex-col fixed w-full justify-between h-screen">
       <Header currentSection={currentSection} />
       <div className="flex justify-between items-end">
-        <ColorToggle className="m-6" />
+        <ColorToggle
+          className="m-6"
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
         <Scroll />
       </div>
     </div>
