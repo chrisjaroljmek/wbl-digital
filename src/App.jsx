@@ -10,7 +10,7 @@ import { Interface } from "./containers/Interface";
 import "./App.css";
 
 export function App() {
-  const [currentSection, setCurrentSection] = useState("");
+  const [currentSection, setCurrentSection] = useState("1");
 
   useEffect(() => {
     const onScroll = () => {

@@ -35,8 +35,9 @@ export function Header(props) {
         <Logo size="md" />
       </div>
       <div className="space-x-20 text-xl text-white">
-        {buttons.map(({ sectionId, label, color }) => (
+        {buttons.map(({ sectionId, label, color }, index) => (
           <button
+            key={index}
             className={classnames(
               "uppercase hover:underline underline-offset-8",
               currentSection === sectionId && `text-${color} underline`
