@@ -29,5 +29,12 @@ export default {
     },
   },
   plugins: [],
-  safelist: ["text-green", "text-orange", "text-blue"],
+  safelist: [
+    "text-dark-green",
+    "text-dark-orange",
+    "text-dark-blue",
+    "text-light-green",
+    "text-light-orange",
+    "text-light-blue",
+  ],
 };
