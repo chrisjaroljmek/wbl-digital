@@ -14,7 +14,7 @@ export function Interface(props) {
           darkMode={darkMode}
           setDarkMode={setDarkMode}
         />
-        <Scroll />
+        <Scroll darkMode={darkMode} />
       </div>
     </div>
   );

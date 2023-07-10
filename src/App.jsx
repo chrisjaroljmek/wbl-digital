@@ -41,7 +41,13 @@ export function App() {
   }, []);
 
   return (
-    <div className={classnames(darkMode && "bg-dark-black")}>
+    <div
+      className={classnames(
+        darkMode
+          ? "bg-dark-black text-dark-white"
+          : "bg-light-white text-light-black"
+      )}
+    >
       <Interface
         currentSection={currentSection}
         darkMode={darkMode}
