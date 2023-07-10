@@ -6,7 +6,7 @@ export function Interface(props) {
   const { currentSection } = props;
 
   return (
-    <div className="flex flex-col fixed w-full justify-between h-screen">
+    <div className="flex flex-col fixed w-full justify-between h-screen z-50">
       <Header currentSection={currentSection} />
       <div className="flex justify-between items-end">
         <ColorToggle className="m-6" />
