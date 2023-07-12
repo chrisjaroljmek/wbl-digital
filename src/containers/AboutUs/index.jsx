@@ -9,11 +9,11 @@ export function AboutUs(props) {
   return (
     <div className={classnames("flex w-8/12 relative", className)}>
       <Shape className="w-full" shape={shape} />
-      <div className="absolute top-[10vw] left-[17.5vw]">
-        <p className="text-[54px] font-semibold leading-none w-[40vw]">
+      <div className="absolute top-[10vw] left-[17vw]">
+        <p className="text-[4vw] font-semibold leading-[4.5vw] w-[44vw]">
           {title}
         </p>
-        <p className="ml-[8vw] mt-[1vw] text-4xl text-grey w-[44vw]">
+        <p className="text-[2.8vw] leading-[3.5vw] ml-[9vw] mt-[1.5vw] text-grey w-[50vw]">
           {description}
         </p>
       </div>
