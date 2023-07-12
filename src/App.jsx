@@ -60,7 +60,12 @@ export function App() {
       </Section>
       <Section id="2" className="pt-[124px]">
         <div className="flex flex-col items-center mt-[4vw] w-full">
-          <AboutUs />
+          <AboutUs
+            title="We produce websites and style brands."
+            shape="square"
+            description="We think of a brand as a promise and deliver digital brand experiences
+            that users can believe in."
+          />
         </div>
       </Section>
       <Section id="3" title="What We Do" className="pt-[124px]" />
