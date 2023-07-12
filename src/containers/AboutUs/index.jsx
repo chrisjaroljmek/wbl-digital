@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import classnames from "classnames";
 
 import { Shape } from "../../components/Shape";
@@ -19,3 +20,10 @@ export function AboutUs(props) {
     </div>
   );
 }
+
+AboutUs.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  shape: PropTypes.oneOf(["circle", "square", "diamond"]).isRequired,
+  className: PropTypes.string,
+};
