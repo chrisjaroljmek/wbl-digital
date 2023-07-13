@@ -7,6 +7,7 @@ import { Shape } from "./components/Shape";
 
 import { Interface } from "./containers/Interface";
 
+import "./assets/fonts/inter.ttf";
 import "./App.css";
 
 export function App() {
@@ -38,7 +39,7 @@ export function App() {
   }, []);
 
   return (
-    <div>
+    <div style={{ fontFamily: "inter" }}>
       <Interface currentSection={currentSection} />
       <Section id="1">
         <div className="flex items-center justify-center h-full">
