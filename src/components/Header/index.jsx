@@ -4,7 +4,7 @@ import classnames from "classnames";
 import { Logo } from "../Logo";
 
 export function Header(props) {
-  const { currentSection, className } = props;
+  const { currentSection, darkMode, className } = props;
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -20,7 +20,8 @@ export function Header(props) {
   return (
     <header
       className={classnames(
-        "flex items-center justify-between w-full bg-black p-6",
+        "flex items-center justify-between w-full p-6",
+        darkMode ? "bg-dark-black" : "bg-light-white",
         className
       )}
     >
@@ -34,13 +35,20 @@ export function Header(props) {
       >
         <Logo className="w-[8vw] pb-2" />
       </div>
-      <div className="space-x-[4vw] text-[1vw] text-white">
+
+      <div
+        className={classnames(
+          "space-x-[4vw] text-[1vw]",
+          darkMode ? "text-dark-white" : "text-light-black"
+        )}
+      >
         {buttons.map(({ sectionId, label, color }) => (
           <button
             key={index}
             className={classnames(
               "uppercase hover:underline underline-offset-8",
-              currentSection === sectionId && `text-${color} underline`
+              currentSection === sectionId &&
+                `text-${darkMode ? "dark" : "light"}-${color} underline`
             )}
             onClick={() => scrollToSection(sectionId)}
           >
@@ -48,7 +56,12 @@ export function Header(props) {
           </button>
         ))}
         <button
-          className="text-white uppercase border-[0.3vw] border-red px-[2.8vw] py-[1.2vw] rounded-full"
+          className={classnames(
+            "uppercase border-[0.3vw] border-red px-[2.8vw] py-[1.2vw] rounded-full",
+            darkMode
+              ? "text-dark-white border-dark-red"
+              : "text-light-black border-light-red"
+          )}
           onClick={() => scrollToSection("5")}
         >
           Get in touch

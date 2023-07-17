@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import classnames from "classnames";
+
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
 
@@ -10,8 +12,10 @@ import "./assets/fonts/inter.ttf";
 import "./App.css";
 
 export function App() {
-  const [currentSection, setCurrentSection] = useState("1");
 
+  const [currentSection, setCurrentSection] = useState("");
+  const [darkMode, setDarkMode] = useState(true);
+  
   useEffect(() => {
     const onScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -38,8 +42,18 @@ export function App() {
   }, []);
 
   return (
-    <div style={{ fontFamily: "inter" }}>
-      <Interface currentSection={currentSection} />
+    <div
+      className={classnames(
+        darkMode
+          ? "bg-dark-black text-dark-white"
+          : "bg-light-white text-light-black"
+      )}
+    >
+      <Interface
+        currentSection={currentSection}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
       <Section id="1">
         <div className="flex items-center justify-center h-full">
           <Logo className="w-4/12 mr-[1.5vw]" />
