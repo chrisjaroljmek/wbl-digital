@@ -4,17 +4,18 @@ import classnames from "classnames";
 
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
-import { SectionHeader } from "./components/SectionHeader";
-import { Shape } from "./components/Shape";
 
+import { AboutUs } from "./containers/AboutUs";
 import { Interface } from "./containers/Interface";
 
+import "./assets/fonts/inter.ttf";
 import "./App.css";
 
 export function App() {
+
   const [currentSection, setCurrentSection] = useState("");
   const [darkMode, setDarkMode] = useState(true);
-
+  
   useEffect(() => {
     const onScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -73,34 +74,14 @@ export function App() {
         </div>
       </Section>
       <Section id="2" className="pt-[124px]">
-        <div className="border border-red relative">
-          <SectionHeader
-            className="absolute top-[100px] left-[100px]"
-            text="We produce websites and style brands."
+        <div className="flex flex-col items-center mt-[4vw] w-full">
+          <AboutUs
+            title="We produce websites and style brands."
+            shape="square"
+            description="We think of a brand as a promise and deliver digital brand experiences
+            that users can believe in."
           />
-          <SectionHeader
-            className="absolute top-0 left-0"
-            sub
-            text="We think of a brand as a promise and deliver digital brand experiences that users can believe in."
-          />
-          <Shape className="absolute top-0 left-0 h-96 w-96" shape="square" />
         </div>
-        {/* <div>
-          <SectionHeader text="We produce websites and style brands." />
-          <SectionHeader
-            sub
-            text="We think of a brand as a promise and deliver digital brand experiences that users can believe in."
-          />
-          <Shape shape="circle" />
-        </div>
-        <div>
-          <SectionHeader text="We add purpose." />
-          <SectionHeader
-            sub
-            text="We think of a brand as a promise and deliver digital brand experiences that users can believe in."
-          />
-          <Shape shape="diamond" />
-        </div> */}
       </Section>
       <Section id="3" title="What We Do" className="pt-[124px]" />
       <Section id="4" title="Our Clients" className="pt-[124px]" />

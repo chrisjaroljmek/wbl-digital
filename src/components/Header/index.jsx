@@ -33,16 +33,18 @@ export function Header(props) {
         )}
         onClick={() => scrollToSection("1")}
       >
-        <Logo size="md" />
+        <Logo className="w-[8vw] pb-2" />
       </div>
+
       <div
         className={classnames(
-          "space-x-20 text-xl",
+          "space-x-[4vw] text-[1vw]",
           darkMode ? "text-dark-white" : "text-light-black"
         )}
       >
         {buttons.map(({ sectionId, label, color }) => (
           <button
+            key={index}
             className={classnames(
               "uppercase hover:underline underline-offset-8",
               currentSection === sectionId &&
@@ -55,7 +57,7 @@ export function Header(props) {
         ))}
         <button
           className={classnames(
-            "uppercase border-4 px-12 py-5 rounded-full",
+            "uppercase border-[0.3vw] border-red px-[2.8vw] py-[1.2vw] rounded-full",
             darkMode
               ? "text-dark-white border-dark-red"
               : "text-light-black border-light-red"
