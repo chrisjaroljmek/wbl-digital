@@ -42,7 +42,7 @@ export function Header(props) {
           darkMode ? "text-dark-white" : "text-light-black"
         )}
       >
-        {buttons.map(({ sectionId, label, color }) => (
+        {buttons.map(({ sectionId, label, color }, index) => (
           <button
             key={index}
             className={classnames(

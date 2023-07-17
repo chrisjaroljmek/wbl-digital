@@ -1,14 +1,13 @@
 import PropTypes from "prop-types";
 import classnames from "classnames";
-
 import { Shape } from "../../components/Shape";
 
 export function AboutUs(props) {
   const { title, description, shape, className } = props;
 
   return (
-    <div className={classnames("flex w-8/12 relative", className)}>
-      <Shape className="w-full" shape={shape} />
+    <div className={classnames("flex w-8/12 relative h-screen", className)}>
+      <Shape shape={shape} />
       <div className="absolute top-[10vw] left-[17vw]">
         <p className="text-[4vw] font-semibold leading-[4.5vw] w-[44vw]">
           {title}

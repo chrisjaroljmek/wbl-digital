@@ -7,7 +7,7 @@ export function Interface(props) {
 
   return (
     <div className="flex flex-col fixed w-full justify-between h-screen z-50">
-      <Header currentSection={currentSection} />
+      <Header currentSection={currentSection} darkMode={darkMode} />
       <div className="flex justify-between items-end">
         <ColorToggle
           className="m-6"

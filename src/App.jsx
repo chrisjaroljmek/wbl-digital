@@ -12,10 +12,9 @@ import "./assets/fonts/inter.ttf";
 import "./App.css";
 
 export function App() {
-
   const [currentSection, setCurrentSection] = useState("");
   const [darkMode, setDarkMode] = useState(true);
-  
+
   useEffect(() => {
     const onScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -54,7 +53,7 @@ export function App() {
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
-      <Section id="1">
+      <Section id="1" className="h-screen">
         <div className="flex items-center justify-center h-full">
           <Logo className="w-4/12 mr-[1.5vw]" />
           <div className="flex flex-col justify-center h-full space-y-[1vw] text-[2.5vw] leading-none tracking-wide whitespace-nowrap pt-[4.5vw]">
@@ -81,11 +80,23 @@ export function App() {
             description="We think of a brand as a promise and deliver digital brand experiences
             that users can believe in."
           />
+          <AboutUs
+            title="We produce websites and style brands."
+            shape="square"
+            description="We think of a brand as a promise and deliver digital brand experiences
+            that users can believe in."
+          />
+          <AboutUs
+            title="We produce websites and style brands."
+            shape="square"
+            description="We think of a brand as a promise and deliver digital brand experiences
+            that users can believe in."
+          />
         </div>
       </Section>
-      <Section id="3" title="What We Do" className="pt-[124px]" />
-      <Section id="4" title="Our Clients" className="pt-[124px]" />
-      <Section id="5" title="Get In Touch" className="pt-[124px]" />
+      <Section id="3" title="What We Do" className="pt-[124px] h-screen" />
+      <Section id="4" title="Our Clients" className="pt-[124px] h-screen" />
+      <Section id="5" title="Get In Touch" className="pt-[124px] h-screen" />
     </div>
   );
 }

@@ -5,7 +5,7 @@ export function Section(props) {
   const { id, title, children, className } = props;
 
   return (
-    <section id={id} className={classnames("h-screen", className)}>
+    <section id={id} className={classnames(className)}>
       <h2>{title}</h2>
       {children}
     </section>
