@@ -32,10 +32,10 @@ export function Header(props) {
         )}
         onClick={() => scrollToSection("1")}
       >
-        <Logo size="md" />
+        <Logo className="w-[8vw] pb-2" />
       </div>
-      <div className="space-x-20 text-xl text-white">
-        {buttons.map(({ sectionId, label, color }, index) => (
+      <div className="space-x-[4vw] text-[1vw] text-white">
+        {buttons.map(({ sectionId, label, color }) => (
           <button
             key={index}
             className={classnames(
@@ -48,7 +48,7 @@ export function Header(props) {
           </button>
         ))}
         <button
-          className="text-white uppercase border-4 border-red px-12 py-5 rounded-full"
+          className="text-white uppercase border-[0.3vw] border-red px-[2.8vw] py-[1.2vw] rounded-full"
           onClick={() => scrollToSection("5")}
         >
           Get in touch
