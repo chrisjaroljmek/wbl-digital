@@ -7,6 +7,7 @@ import { Section } from "./components/Section";
 
 import { AboutUs } from "./containers/AboutUs";
 import { Interface } from "./containers/Interface";
+import { SubmissionForm } from "./containers/SubmissionForm";
 
 import "./assets/fonts/inter.ttf";
 import "./App.css";
@@ -96,7 +97,9 @@ export function App() {
       </Section>
       <Section id="3" title="What We Do" className="pt-[124px] h-screen" />
       <Section id="4" title="Our Clients" className="pt-[124px] h-screen" />
-      <Section id="5" title="Get In Touch" className="pt-[124px] h-screen" />
+      <Section id="5" title="Get In Touch" className="pt-[124px] h-screen">
+        <SubmissionForm />
+      </Section>
     </div>
   );
 }
