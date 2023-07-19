@@ -39,7 +39,7 @@ export function SubmissionForm(props) {
   return (
     <form
       className={classnames(
-        "flex flex-col items-center justify-center",
+        "flex flex-col items-center justify-center text-dark-black",
         className
       )}
       onSubmit={onSubmit}
