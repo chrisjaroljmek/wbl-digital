@@ -73,5 +73,6 @@ export function Header(props) {
 
 Header.propTypes = {
   currentSection: PropTypes.string.isRequired,
+  darkMode: PropTypes.bool.isRequired,
   className: PropTypes.string,
 };
