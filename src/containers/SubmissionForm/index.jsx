@@ -62,7 +62,9 @@ export function SubmissionForm(props) {
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Message"
       />
-      <button type="submit">Send</button>
+      <button type="submit" className="text-white">
+        Send
+      </button>
     </form>
   );
 }
