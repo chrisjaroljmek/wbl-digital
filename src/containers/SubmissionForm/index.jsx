@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
+const backendURL = process.env.REACT_APP_BACKEND_URL;
+
 export function SubmissionForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,7 +18,7 @@ export function SubmissionForm() {
     };
 
     axios
-      .post("send-email", data)
+      .post(`${backendURL}/send-email`, data)
       .then((response) => {
         console.log(response.data);
 
