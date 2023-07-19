@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { ColorToggle } from "../../components/ColorToggle";
 import { Header } from "../../components/Header";
 import { Scroll } from "../../components/Scroll";
@@ -19,3 +21,9 @@ export function Interface(props) {
     </div>
   );
 }
+
+Interface.propTypes = {
+  currentSection: PropTypes.string.isRequired,
+  darkMode: PropTypes.bool.isRequired,
+  setDarkMode: PropTypes.func.isRequired,
+};
