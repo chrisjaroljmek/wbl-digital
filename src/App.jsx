@@ -59,15 +59,15 @@ export function App() {
           <div className="flex flex-col justify-center h-full space-y-[1vw] text-[2.5vw] leading-none tracking-wide whitespace-nowrap pt-[4.5vw]">
             <div className="flex items-end">
               Engaging web experiences
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-green mb-[0.4vw] ml-[0.2vw]"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-dark-green mb-[0.3vw] ml-[0.4vw]"></span>
             </div>
             <div className="flex items-end">
               <span>Purposeful digital solutions</span>
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-darkBlue mb-[0.4vw] ml-[0.2vw]"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-dark-darkBlue mb-[0.3vw] ml-[0.4vw]"></span>
             </div>
             <div className="flex items-end">
               <span>Empowering web design</span>
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-red mb-[0.4vw] ml-[0.2vw]"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-dark-red mb-[0.3vw] ml-[0.4vw]"></span>
             </div>
           </div>
         </div>

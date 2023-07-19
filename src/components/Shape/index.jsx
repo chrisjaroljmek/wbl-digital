@@ -1,7 +1,7 @@
 import classnames from "classnames";
 
 export function Shape(props) {
-  const { shape, className, color } = props;
+  const { shape, className } = props;
   return (
     <div
       className={classnames(
