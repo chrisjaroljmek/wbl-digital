@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export function SubmissionForm() {
   const [name, setName] = useState("");
@@ -7,6 +8,25 @@ export function SubmissionForm() {
 
   function onSubmit(e) {
     e.preventDefault();
+
+    const data = {
+      name,
+      email,
+      message,
+    };
+
+    axios
+      .post("send-email", data)
+      .then((response) => {
+        console.log(response.data);
+
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Error sending email: ", error);
+      });
   }
 
   return (
