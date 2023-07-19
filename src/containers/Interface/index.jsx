@@ -6,7 +6,7 @@ export function Interface(props) {
   const { currentSection, darkMode, setDarkMode } = props;
 
   return (
-    <div className="flex flex-col fixed w-full justify-between h-screen z-50">
+    <div className="flex flex-col fixed w-full justify-between h-screen z-40">
       <Header currentSection={currentSection} darkMode={darkMode} />
       <div className="flex justify-between items-end">
         <ColorToggle

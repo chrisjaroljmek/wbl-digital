@@ -1,9 +1,13 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
 import axios from "axios";
 
-const backendURL = process.env.REACT_APP_BACKEND_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
-export function SubmissionForm() {
+export function SubmissionForm(props) {
+  const { className } = props;
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -33,7 +37,10 @@ export function SubmissionForm() {
 
   return (
     <form
-      className="flex flex-col items-center justify-center"
+      className={classnames(
+        "flex flex-col items-center justify-center",
+        className
+      )}
       onSubmit={onSubmit}
     >
       <input
@@ -58,3 +65,7 @@ export function SubmissionForm() {
     </form>
   );
 }
+
+SubmissionForm.propTypes = {
+  className: PropTypes.string,
+};
