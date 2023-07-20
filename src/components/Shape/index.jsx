@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import classnames from "classnames";
 
 export function Shape(props) {
@@ -14,3 +15,8 @@ export function Shape(props) {
     ></div>
   );
 }
+
+Shape.propTypes = {
+  shape: PropTypes.oneOf(["circle", "square", "diamond"]).isRequired,
+  className: PropTypes.string,
+};

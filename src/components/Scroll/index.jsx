@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import arrow from "../../assets/icons/arrow.svg";
 import blackArrow from "../../assets/icons/black-arrow.svg";
 
@@ -15,3 +17,7 @@ export function Scroll(props) {
     </div>
   );
 }
+
+Scroll.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+};

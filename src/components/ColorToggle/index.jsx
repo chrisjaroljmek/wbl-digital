@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import classnames from "classnames";
 
 import sun from "../../assets/icons/sun.svg";
@@ -20,3 +21,9 @@ export function ColorToggle(props) {
     </div>
   );
 }
+
+ColorToggle.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  setDarkMode: PropTypes.func.isRequired,
+  className: PropTypes.string,
+};
