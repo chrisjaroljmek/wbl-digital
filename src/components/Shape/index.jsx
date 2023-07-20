@@ -6,13 +6,20 @@ export function Shape(props) {
   return (
     <div
       className={classnames(
-        "border-4",
+        "display flex items-center justify-center",
         shape === "circle" && "h-12 w-12 rounded-full",
-        shape === "square" && "h-[28vw] w-[24vw]",
+        shape === "square" &&
+          "h-[28vw] w-[24vw] bg-gradient-to-tr from-dark-green to-yellow-500",
         shape === "diamond" && "h-12 w-12 transform rotate-45",
         className
       )}
-    ></div>
+    >
+      <div
+        className={classnames(
+          shape === "square" && "h-[27.3vw] w-[23.3vw] bg-dark-black"
+        )}
+      ></div>
+    </div>
   );
 }
 

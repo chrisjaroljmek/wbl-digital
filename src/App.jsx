@@ -78,19 +78,19 @@ export function App() {
             title="We produce websites and style brands."
             shape="square"
             description="We think of a brand as a promise and deliver digital brand experiences
-            that users can believe in."
+            that users can believe in"
           />
           <AboutUs
             title="We produce websites and style brands."
             shape="square"
             description="We think of a brand as a promise and deliver digital brand experiences
-            that users can believe in."
+            that users can believe in"
           />
           <AboutUs
             title="We produce websites and style brands."
             shape="square"
             description="We think of a brand as a promise and deliver digital brand experiences
-            that users can believe in."
+            that users can believe in"
           />
         </div>
       </Section>
