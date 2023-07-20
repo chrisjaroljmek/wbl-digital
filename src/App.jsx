@@ -4,13 +4,24 @@ import classnames from "classnames";
 
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
+import { Clients } from "./components/Clients";
 
 import { AboutUs } from "./containers/AboutUs";
 import { Interface } from "./containers/Interface";
 import { SubmissionForm } from "./containers/SubmissionForm";
 
+import companyOne from "./assets/images/101.svg";
+import companyTwo from "./assets/images/circleart.svg";
+import companyThree from "./assets/images/munchfit.svg";
+
 import "./assets/fonts/inter.ttf";
 import "./App.css";
+
+const clients = [
+  { image: companyOne, name: "101 Ways", type: "Climate Sector Campaign" },
+  { image: companyTwo, name: "Circle Art", type: "East Africa Art Gallery" },
+  { image: companyThree, name: "MunchFit", type: "Food Delivery E-Commerce" },
+];
 
 export function App() {
   const [currentSection, setCurrentSection] = useState("");
@@ -82,16 +93,9 @@ export function App() {
             that users can believe in"
           />
           <AboutUs
-            title="We produce websites and style brands."
-            shape="square"
-            description="We think of a brand as a promise and deliver digital brand experiences
-            that users can believe in"
-          />
-          <AboutUs
-            title="We produce websites and style brands."
-            shape="square"
-            description="We think of a brand as a promise and deliver digital brand experiences
-            that users can believe in"
+            title="We add purpose."
+            shape="circle"
+            description="We think of a brand as a promise and deliver digital brand experiences"
           />
         </div>
       </Section>
