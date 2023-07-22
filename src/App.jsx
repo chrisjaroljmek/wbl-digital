@@ -100,7 +100,12 @@ export function App() {
         </div>
       </Section>
       <Section id="3" title="What We Do" className="pt-[124px] h-screen" />
-      <Section id="4" title="Our Clients" className="pt-[124px] h-screen" />
+      <Section id="4" className="pt-[124px] h-screen">
+        {clients.map(({ image, name, type }, index) => {
+          return <Clients image={image} name={name} type={type} key={index} />;
+        })}
+      </Section>
+
       <Section id="5" title="Get In Touch" className="pt-[124px] h-screen">
         <SubmissionForm className="relative z-50" />
       </Section>

@@ -1,5 +1,12 @@
 export function Clients(props) {
   const { image, name, type, className } = props;
 
-  return <img src={image} alt={name} />;
+  return (
+    <div className="relative">
+      <img className="w-48 object-cover" src={image} alt={name} />
+      <div className="h-[256px] w-48 border border-dark-red top-[24px] left-[24px] absolute"></div>
+      <p>{name}</p>
+      <p>{type}</p>
+    </div>
+  );
 }
