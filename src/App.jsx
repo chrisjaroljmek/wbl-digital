@@ -69,7 +69,7 @@ export function App() {
         darkMode={darkMode}
       />
       <ColorToggle
-        className="fixed bottom-0 m-6 w-fit z-40"
+        className="fixed bottom-0 m-[2vw] w-fit z-40"
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />

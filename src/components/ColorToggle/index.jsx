@@ -13,11 +13,14 @@ export function ColorToggle(props) {
 
   return (
     <div
-      className={classnames("flex space-x-2", className)}
+      className={classnames(
+        "h-[3vw] flex space-x-[0.6vw] cursor-pointer",
+        className
+      )}
       onClick={onColorToggle}
     >
-      <img className="h-12 cursor-pointer" src={sun} alt="light" />
-      <img className="h-12 cursor-pointer" src={moon} alt="dark" />
+      <img src={sun} alt="light" />
+      <img src={moon} alt="dark" />
     </div>
   );
 }
