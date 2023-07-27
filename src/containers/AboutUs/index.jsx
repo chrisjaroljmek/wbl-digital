@@ -13,7 +13,7 @@ export function AboutUs(props) {
         <p className="text-[4vw] font-semibold leading-[4.5vw] w-[44vw] drop-shadow-xl">
           {title}
         </p>
-        <p className="text-[2.8vw] leading-[3.5vw] ml-[9vw] mt-[1.5vw] text-dark-grey w-[50vw]">
+        <p className="text-[2.8vw] leading-[3.5vw] ml-[9vw] mt-[1.5vw] text-grey w-[50vw]">
           {description}
         </p>
       </div>
