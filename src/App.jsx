@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 
 import classnames from "classnames";
 
-import { Logo } from "./components/Logo";
-import { Section } from "./components/Section";
 import { Clients } from "./components/Clients";
+import { ColorToggle } from "./components/ColorToggle";
+import { Header } from "./components/Header";
+import { Logo } from "./components/Logo";
+import { Scroll } from "./components/Scroll";
+import { Section } from "./components/Section";
 
 import { AboutUs } from "./containers/AboutUs";
-import { Interface } from "./containers/Interface";
 import { SubmissionForm } from "./containers/SubmissionForm";
 
 import companyOne from "./assets/images/101.svg";
@@ -55,16 +57,23 @@ export function App() {
   return (
     <div
       className={classnames(
+        "relative",
         darkMode
           ? "bg-dark-black text-dark-white"
           : "bg-light-white text-light-black"
       )}
     >
-      <Interface
+      <Header
+        className="fixed top-0"
         currentSection={currentSection}
+        darkMode={darkMode}
+      />
+      <ColorToggle
+        className="fixed bottom-0 m-6 w-fit"
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
+      <Scroll className="fixed bottom-0 right-0" darkMode={darkMode} />
       <Section id="1" className="h-screen">
         <div className="flex items-center justify-center h-full">
           <Logo className="w-4/12 mr-[1.5vw]" />
