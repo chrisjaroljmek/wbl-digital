@@ -10,13 +10,15 @@ export function Scroll(props) {
   return (
     <div
       className={classnames(
-        "flex flex-col justify-between mb-6 h-[300px]",
+        "flex flex-col justify-end mb-[2vw] h-[16vw]",
         className
       )}
     >
-      <div className="transform -rotate-90 uppercase">Scroll</div>
+      <div className="transform -rotate-90 translate-y-[-2.4vw] uppercase text-[1vw]">
+        Scroll
+      </div>
       <img
-        className="h-[240px]"
+        className="h-[12vw]"
         src={darkMode ? arrow : blackArrow}
         alt="arrow"
       />
