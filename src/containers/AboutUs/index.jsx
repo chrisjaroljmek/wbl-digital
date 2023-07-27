@@ -4,7 +4,7 @@ import classnames from "classnames";
 import { Shape } from "../../components/Shape";
 
 export function AboutUs(props) {
-  const { title, description, shape, className } = props;
+  const { title, description, shape, darkMode, className } = props;
 
   return (
     <div className={classnames("flex w-8/12 relative h-screen", className)}>
@@ -25,5 +25,6 @@ AboutUs.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   shape: PropTypes.oneOf(["circle", "square", "diamond"]).isRequired,
+  darkMode: PropTypes.bool.isRequired,
   className: PropTypes.string,
 };
