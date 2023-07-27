@@ -8,7 +8,7 @@ export function AboutUs(props) {
 
   return (
     <div className={classnames("flex w-8/12 relative h-screen", className)}>
-      <Shape shape={shape} />
+      <Shape shape={shape} darkMode={darkMode} />
       <div className="absolute top-[10vw] left-[17vw]">
         <p className="text-[4vw] font-semibold leading-[4.5vw] w-[44vw] drop-shadow-xl">
           {title}

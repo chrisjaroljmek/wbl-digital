@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 export function Shape(props) {
-  const { shape, className } = props;
+  const { shape, darkMode, className } = props;
   return (
     <div
       className={classnames(
@@ -16,8 +16,18 @@ export function Shape(props) {
     >
       <div
         className={classnames(
-          shape === "square" && "h-[27.3vw] w-[23.3vw] bg-black",
-          shape === "circle" && "bg-black h-[19.3vw] w-[19.3vw] rounded-full"
+          shape === "square" &&
+            darkMode === true &&
+            "h-[27.3vw] w-[23.3vw] bg-black",
+          shape === "square" &&
+            darkMode === false &&
+            "h-[27.3vw] w-[23.3vw] bg-white",
+          shape === "circle" &&
+            darkMode === true &&
+            "bg-black h-[19.3vw] w-[19.3vw] rounded-full",
+          shape === "circle" &&
+            darkMode === false &&
+            "bg-white h-[19.3vw] w-[19.3vw] rounded-full"
         )}
       ></div>
     </div>
@@ -26,5 +36,6 @@ export function Shape(props) {
 
 Shape.propTypes = {
   shape: PropTypes.oneOf(["circle", "square", "diamond"]).isRequired,
+  darkMode: PropTypes.bool.isRequired,
   className: PropTypes.string,
 };
