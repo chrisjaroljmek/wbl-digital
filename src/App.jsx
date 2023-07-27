@@ -5,6 +5,7 @@ import classnames from "classnames";
 import { Logo } from "./components/Logo";
 import { Section } from "./components/Section";
 import { Clients } from "./components/Clients";
+import { Skill } from "./components/Skill";
 
 import { AboutUs } from "./containers/AboutUs";
 import { Interface } from "./containers/Interface";
@@ -99,8 +100,10 @@ export function App() {
           />
         </div>
       </Section>
-      <Section id="3" title="What We Do" className="pt-[124px] h-screen" />
-      <Section id="4" className="pt-[124px] h-screen">
+      <Section id="3" className="pt-[124px]">
+        <Skill />
+      </Section>
+      <Section id="4" className="pt-[124px]">
         {clients.map(({ image, name, type }, index) => {
           return <Clients image={image} name={name} type={type} key={index} />;
         })}
