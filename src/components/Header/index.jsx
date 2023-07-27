@@ -6,6 +6,8 @@ import { Logo } from "../Logo";
 export function Header(props) {
   const { currentSection, darkMode, className } = props;
 
+  console.log(currentSection);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: "smooth" });

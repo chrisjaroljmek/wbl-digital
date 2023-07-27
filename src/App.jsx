@@ -64,16 +64,16 @@ export function App() {
       )}
     >
       <Header
-        className="fixed top-0"
+        className="fixed top-0 z-40"
         currentSection={currentSection}
         darkMode={darkMode}
       />
       <ColorToggle
-        className="fixed bottom-0 m-6 w-fit"
+        className="fixed bottom-0 m-6 w-fit z-40"
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
-      <Scroll className="fixed bottom-0 right-0" darkMode={darkMode} />
+      <Scroll className="fixed bottom-0 right-0 z-40" darkMode={darkMode} />
       <Section id="1" className="h-screen">
         <div className="flex items-center justify-center h-full">
           <Logo className="w-4/12 mr-[1.5vw]" />
