@@ -6,6 +6,8 @@ import { Logo } from "../Logo";
 export function Header(props) {
   const { currentSection, darkMode, className } = props;
 
+  console.log(currentSection);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: "smooth" });
@@ -20,14 +22,16 @@ export function Header(props) {
   return (
     <header
       className={classnames(
+
         "flex items-center justify-between w-full p-6",
         darkMode ? "bg-dark-bg" : "bg-light-bg",
+
         className
       )}
     >
       <div
         className={classnames(
-          "w-[120px] h-[60px] flex items-center transition-opacity duration-1000 ease-in-out",
+          "flex items-center transition-opacity duration-1000 ease-in-out",
           currentSection === "1" && "opacity-0",
           currentSection !== "1" && "opacity-1 cursor-pointer"
         )}
