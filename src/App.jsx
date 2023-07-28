@@ -11,6 +11,7 @@ import { Section } from "./components/Section";
 
 import { AboutUs } from "./containers/AboutUs";
 import { SubmissionForm } from "./containers/SubmissionForm";
+import { WhatWeDo } from "./containers/WhatWeDo";
 
 import companyOne from "./assets/images/101.svg";
 import companyTwo from "./assets/images/circleart.svg";
@@ -108,8 +109,10 @@ export function App() {
           />
         </div>
       </Section>
-      <Section id="3" title="What We Do" className="pt-[124px] h-screen" />
-      <Section id="4" className="pt-[124px] h-screen">
+      <Section id="3" className="pt-[124px]">
+        <WhatWeDo />
+      </Section>
+      <Section id="4" className="pt-[124px]">
         {clients.map(({ image, name, type }, index) => {
           return <Clients image={image} name={name} type={type} key={index} />;
         })}
