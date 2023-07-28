@@ -58,9 +58,7 @@ export function App() {
     <div
       className={classnames(
         "relative",
-        darkMode
-          ? "bg-dark-black text-dark-white"
-          : "bg-light-white text-light-black"
+        darkMode ? "bg-dark-bg text-dark-text" : "bg-light-bg text-light-text"
       )}
     >
       <Header
@@ -80,15 +78,15 @@ export function App() {
           <div className="flex flex-col justify-center h-full space-y-[1vw] text-[2.5vw] leading-none tracking-wide whitespace-nowrap pt-[4.5vw]">
             <div className="flex items-end">
               Engaging web experiences
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-dark-green mb-[0.3vw] ml-[0.4vw]"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-green mb-[0.3vw] ml-[0.4vw]"></span>
             </div>
             <div className="flex items-end">
               <span>Purposeful digital solutions</span>
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-dark-darkBlue mb-[0.3vw] ml-[0.4vw]"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-darkBlue mb-[0.3vw] ml-[0.4vw]"></span>
             </div>
             <div className="flex items-end">
               <span>Empowering web design</span>
-              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-dark-red mb-[0.3vw] ml-[0.4vw]"></span>
+              <span className="h-[0.5vw] w-[0.5vw] rounded-full bg-red mb-[0.3vw] ml-[0.4vw]"></span>
             </div>
           </div>
         </div>
@@ -100,11 +98,13 @@ export function App() {
             shape="square"
             description="We think of a brand as a promise and deliver digital brand experiences
             that users can believe in"
+            darkMode={darkMode}
           />
           <AboutUs
             title="We add purpose."
             shape="circle"
             description="We think of a brand as a promise and deliver digital brand experiences"
+            darkMode={darkMode}
           />
         </div>
       </Section>
@@ -114,7 +114,6 @@ export function App() {
           return <Clients image={image} name={name} type={type} key={index} />;
         })}
       </Section>
-
       <Section id="5" title="Get In Touch" className="pt-[124px] h-screen">
         <SubmissionForm className="relative z-50" />
       </Section>
