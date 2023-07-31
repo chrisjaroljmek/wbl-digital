@@ -2,15 +2,31 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 export function AboutUs(props) {
-  const { title, description, darkMode, className } = props;
+  const { title, description, darkMode, size, flip, className } = props;
 
   return (
-    <div className={classnames("flex w-8/12 relative mb-48", className)}>
-      <div className="display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue h-[20vw] w-[20vw] rounded-full">
+    <div
+      className={classnames(
+        "flex w-8/12 relative mb-48",
+        flip && "justify-end",
+        className
+      )}
+    >
+      <div
+        className={classnames(
+          "display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue  rounded-full",
+          size === "sm" && "h-[18vw] w-[18vw]",
+          size === "md" && "h-[24vw] w-[24vw]",
+          size === "lg" && "h-[30vw] w-[30vw]"
+        )}
+      >
         <div
           className={classnames(
-            darkMode === true && "bg-black h-[19.3vw] w-[19.3vw] rounded-full",
-            darkMode === false && "bg-white h-[19.3vw] w-[19.3vw] rounded-full"
+            darkMode === true && "bg-black rounded-full",
+            darkMode === false && "bg-white  rounded-full",
+            size === "sm" && "h-[17.3vw] w-[17.3vw]",
+            size === "md" && "h-[23.3vw] w-[23.3vw]",
+            size === "lg" && "h-[29.3vw] w-[29.3vw]"
           )}
         ></div>
       </div>
@@ -30,5 +46,7 @@ AboutUs.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   darkMode: PropTypes.bool.isRequired,
+  size: PropTypes.oneOf(["sm", "md", "lg"]).isRequired,
+  flip: PropTypes.bool,
   className: PropTypes.string,
 };

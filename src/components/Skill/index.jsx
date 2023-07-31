@@ -28,7 +28,7 @@ export function Skill(props) {
         className="flex my-16 mx-8"
       >
         <div className="mr-8">
-          <p className="relative drop-shadow-xl text-[4vw] leading-none whitespace-nowrap z-50">
+          <p className="relative drop-shadow-xl text-[4vw] leading-none whitespace-nowrap z-20">
             {title}
           </p>
           <div

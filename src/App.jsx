@@ -95,21 +95,22 @@ export function App() {
       <Section id="2" className="pt-[124px]">
         <div className="flex flex-col items-center">
           <AboutUs
+            size="lg"
             title="We produce websites and style brands."
-            shape="square"
             description="We think of a brand as a promise and deliver digital brand experiences
             that users can believe in"
             darkMode={darkMode}
           />
           <AboutUs
+            flip
+            size="md"
             title="We add purpose."
-            shape="circle"
             description="We think of a brand as a promise and deliver digital brand experiences"
             darkMode={darkMode}
           />
           <AboutUs
+            size="sm"
             title="We add purpose."
-            shape="circle"
             description="We think of a brand as a promise and deliver digital brand experiences"
             darkMode={darkMode}
           />
