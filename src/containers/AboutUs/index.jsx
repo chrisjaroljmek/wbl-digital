@@ -24,7 +24,7 @@ export function AboutUs(props) {
 AboutUs.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  shape: PropTypes.oneOf(["circle", "square", "diamond"]).isRequired,
+  shape: PropTypes.oneOf(["circle", "square"]).isRequired,
   darkMode: PropTypes.bool.isRequired,
   className: PropTypes.string,
 };
