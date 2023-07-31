@@ -16,7 +16,12 @@ export function Skill(props) {
   };
 
   return (
-    <div className={classnames("border-t border-grey w-full", className)}>
+    <div
+      className={classnames(
+        "border-t border-grey w-full border-opacity-40",
+        className
+      )}
+    >
       <div
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
