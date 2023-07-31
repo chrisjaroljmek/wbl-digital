@@ -38,26 +38,25 @@ export function SubmissionForm(props) {
 
   return (
     <form
-      className={classnames(
-        "flex flex-col items-center justify-center text-dark-black",
-        className
-      )}
+      className={classnames("flex flex-col flex-1 space-y-4", className)}
       onSubmit={onSubmit}
     >
       <input
+        className="pl-4 bg-dark-bg text-grey border border-grey h-[50px]"
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Name"
       />
       <input
+        className="pl-4 bg-dark-bg text-grey border border-grey h-[50px]"
         type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
       />
-      <input
-        type="text"
+      <textarea
+        className="pl-4 pt-4 bg-dark-bg text-grey border border-grey flex-1 max-h-[200px]"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Message"
