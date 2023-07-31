@@ -107,6 +107,12 @@ export function App() {
             description="We think of a brand as a promise and deliver digital brand experiences"
             darkMode={darkMode}
           />
+          <AboutUs
+            title="We add purpose."
+            shape="circle"
+            description="We think of a brand as a promise and deliver digital brand experiences"
+            darkMode={darkMode}
+          />
         </div>
       </Section>
       <Section id="3" className="pt-[124px]">
