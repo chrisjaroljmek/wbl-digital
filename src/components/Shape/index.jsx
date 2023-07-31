@@ -35,7 +35,7 @@ export function Shape(props) {
 }
 
 Shape.propTypes = {
-  shape: PropTypes.oneOf(["circle", "square", "diamond"]).isRequired,
+  shape: PropTypes.oneOf(["circle", "square"]).isRequired,
   darkMode: PropTypes.bool.isRequired,
   className: PropTypes.string,
 };

@@ -117,7 +117,7 @@ export function App() {
           return <Clients image={image} name={name} type={type} key={index} />;
         })}
       </Section>
-      <Section id="5" title="Get In Touch" className="pt-[124px] h-screen">
+      <Section id="5" className="pt-[124px] h-screen">
         <SubmissionForm className="relative z-50" />
       </Section>
     </div>

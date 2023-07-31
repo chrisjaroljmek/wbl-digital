@@ -1,8 +1,11 @@
+import PropTypes from "prop-types";
+import classnames from "classnames";
+
 export function Skill(props) {
-  const { title, description } = props;
+  const { title, description, className } = props;
 
   return (
-    <div className="border-t border-dark-grey w-full">
+    <div className={classnames("border-t border-dark-grey w-full", className)}>
       <div className="flex my-16 mx-8">
         <div className="mr-8">
           <p className="text-[4vw] leading-none whitespace-nowrap">{title}</p>
@@ -15,3 +18,9 @@ export function Skill(props) {
     </div>
   );
 }
+
+Skill.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
