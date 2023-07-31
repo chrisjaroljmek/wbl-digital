@@ -28,4 +28,5 @@ export function Scroll(props) {
 
 Scroll.propTypes = {
   darkMode: PropTypes.bool.isRequired,
+  className: PropTypes.string,
 };
