@@ -7,7 +7,7 @@ export function AboutUs(props) {
   const { title, description, shape, darkMode, className } = props;
 
   return (
-    <div className={classnames("flex w-8/12 relative h-screen", className)}>
+    <div className={classnames("flex w-8/12 relative mb-48", className)}>
       <Shape shape={shape} darkMode={darkMode} />
       <div className="absolute top-[10vw] left-[17vw]">
         <p className="text-[4vw] font-semibold leading-[4.5vw] w-[44vw] drop-shadow-xl">

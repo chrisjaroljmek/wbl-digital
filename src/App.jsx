@@ -93,7 +93,7 @@ export function App() {
         </div>
       </Section>
       <Section id="2" className="pt-[124px]">
-        <div className="flex flex-col items-center mt-[4vw] w-full">
+        <div className="flex flex-col items-center">
           <AboutUs
             title="We produce websites and style brands."
             shape="square"
