@@ -36,7 +36,7 @@ export function Skill(props) {
             )}
             style={{
               height: "0.125rem",
-              transition: "transform 0.3s ease",
+              transition: "transform 0.5s ease",
               transformOrigin: "bottom",
               transform: `scaleY(${hover ? 8 : 1})`,
             }}
