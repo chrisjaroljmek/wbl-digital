@@ -4,6 +4,7 @@ import classnames from "classnames";
 
 import { Clients } from "./components/Clients";
 import { ColorToggle } from "./components/ColorToggle";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Logo } from "./components/Logo";
 import { Scroll } from "./components/Scroll";
@@ -127,6 +128,7 @@ export function App() {
       <Section id="5" className="pt-[124px] h-screen">
         <SubmissionForm className="relative z-50" />
       </Section>
+      <Footer />
     </div>
   );
 }
