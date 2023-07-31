@@ -1,14 +1,19 @@
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-import { Shape } from "../../components/Shape";
-
 export function AboutUs(props) {
-  const { title, description, shape, darkMode, className } = props;
+  const { title, description, darkMode, className } = props;
 
   return (
     <div className={classnames("flex w-8/12 relative mb-48", className)}>
-      <Shape shape={shape} darkMode={darkMode} />
+      <div className="display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue h-[20vw] w-[20vw] rounded-full">
+        <div
+          className={classnames(
+            darkMode === true && "bg-black h-[19.3vw] w-[19.3vw] rounded-full",
+            darkMode === false && "bg-white h-[19.3vw] w-[19.3vw] rounded-full"
+          )}
+        ></div>
+      </div>
       <div className="absolute top-[10vw] left-[17vw]">
         <p className="text-[4vw] font-semibold leading-[4.5vw] w-[44vw] drop-shadow-xl">
           {title}
@@ -24,7 +29,6 @@ export function AboutUs(props) {
 AboutUs.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  shape: PropTypes.oneOf(["circle", "square"]).isRequired,
   darkMode: PropTypes.bool.isRequired,
   className: PropTypes.string,
 };
