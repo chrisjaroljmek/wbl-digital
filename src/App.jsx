@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 
 import classnames from "classnames";
 
-import { Clients } from "./components/Clients";
+import { ClientCard } from "./components/ClientCard";
 import { ColorToggle } from "./components/ColorToggle";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Logo } from "./components/Logo";
 import { Scroll } from "./components/Scroll";
@@ -16,14 +17,20 @@ import { WhatWeDo } from "./containers/WhatWeDo";
 import companyOne from "./assets/images/101.svg";
 import companyTwo from "./assets/images/circleart.svg";
 import companyThree from "./assets/images/munchfit.svg";
+import companyFour from "./assets/images/biofoods.svg";
+import companyFive from "./assets/images/kikili.svg";
+import companySix from "./assets/images/theoaklondon.svg";
 
 import "./assets/fonts/inter.ttf";
 import "./App.css";
 
 const clients = [
-  { image: companyOne, name: "101 Ways", type: "Climate Sector Campaign" },
-  { image: companyTwo, name: "Circle Art", type: "East Africa Art Gallery" },
-  { image: companyThree, name: "MunchFit", type: "Food Delivery E-Commerce" },
+  { image: companyOne, name: "101 Ways" },
+  { image: companyTwo, name: "Circle Art" },
+  { image: companyThree, name: "MunchFit" },
+  { image: companyFour, name: "Biofoods" },
+  { image: companyFive, name: "Kikili Beach" },
+  { image: companySix, name: "The Oak London" },
 ];
 
 export function App() {
@@ -119,11 +126,14 @@ export function App() {
       <Section id="3" className="pt-[124px]">
         <WhatWeDo />
       </Section>
-      <Section id="4" className="pt-[124px]">
+      <Section id="4" className="flex justify-between pt-[124px]">
         {clients.map(({ image, name, type }, index) => {
-          return <Clients image={image} name={name} type={type} key={index} />;
+          return (
+            <ClientCard image={image} name={name} type={type} key={index} />
+          );
         })}
       </Section>
+
       <Section className="flex flex-col justify-center items-center h-screen">
         <div className="space-y-8 w-3/4">
           <Logo className="w-1/3" />
@@ -139,7 +149,9 @@ export function App() {
       </Section>
       <Section id="5" className="pt-[124px] h-screen">
         <SubmissionForm className="relative z-50" />
+
       </Section>
+      <Footer />
     </div>
   );
 }
