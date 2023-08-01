@@ -133,16 +133,23 @@ export function App() {
           );
         })}
       </Section>
-      <Section id="5" className="flex justify-center pt-[124px] h-screen">
-        <div className="mr-24">
-          <p className="text-[4vw] font-semibold leading-[4.5vw]  drop-shadow-xl">
-            Get in touch.
+
+      <Section className="flex flex-col justify-center items-center h-screen">
+        <div className="space-y-8 w-3/4">
+          <Logo className="w-1/3" />
+          <p className="text-[4vw] font-semibold leading-[4.4vw] drop-shadow-xl">
+            Specialist Creatives, Tech Professionals, Web Producers, and UX
+            Designers.
           </p>
-          <p className="text-[2.8vw] leading-[3.5vw] mt-[1.5vw] text-grey ">
-            hello@wbldigital.io
+          <p className="text-[2.8vw] leading-[3.4vw] text-grey">
+            We are WBL. We bring rich, international experience to the art of
+            web design
           </p>
         </div>
-        <SubmissionForm className="relative z-50 max-w-[500px]" />
+      </Section>
+      <Section id="5" className="pt-[124px] h-screen">
+        <SubmissionForm className="relative z-50" />
+
       </Section>
       <Footer />
     </div>
