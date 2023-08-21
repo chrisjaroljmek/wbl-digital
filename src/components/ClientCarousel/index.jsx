@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { ClientCard } from "../ClientCard";
 
 import companyOne from "../../assets/images/101.svg";
@@ -19,23 +17,19 @@ const clients = [
 ];
 
 export function ClientCarousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % clients.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? clients.length - 1 : prevSlide - 1
-    );
-  };
-
   return (
     <>
-      {clients.map(({ image, name, type }, index) => {
-        return <ClientCard image={image} name={name} type={type} key={index} />;
-      })}
+      <div className="relative overflow-hidden">
+        {clients.map(({ image, name, type }, index) => (
+          <div key={index}>
+            <ClientCard image={image} name={name} type={type} />
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-between absolute top left w-full h-full">
+        <button>Prev</button>
+        <button>Next</button>
+      </div>
     </>
   );
 }
