@@ -21,6 +21,16 @@ const clients = [
 export function ClientCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % clients.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? clients.length - 1 : prevSlide - 1
+    );
+  };
+
   return (
     <>
       {clients.map(({ image, name, type }, index) => {
