@@ -17,6 +17,9 @@ const clients = [
 ];
 
 export function ClientCarousel() {
+  const movePrev = () => {};
+  const moveNext = () => {};
+
   return (
     <>
       <div className="relative overflow-hidden">
@@ -27,8 +30,8 @@ export function ClientCarousel() {
         ))}
       </div>
       <div className="flex justify-between absolute top left w-full h-full">
-        <button>Prev</button>
-        <button>Next</button>
+        <button onClick={movePrev}>Prev</button>
+        <button onClick={moveNext}>Next</button>
       </div>
     </>
   );
