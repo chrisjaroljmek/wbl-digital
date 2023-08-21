@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { ClientCard } from "../ClientCard";
 
 import companyOne from "../../assets/images/101.svg";
@@ -17,6 +19,8 @@ const clients = [
 ];
 
 export function ClientCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   return (
     <>
       {clients.map(({ image, name, type }, index) => {
