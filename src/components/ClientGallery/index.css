@@ -3,7 +3,7 @@
   animation: slide var(--speed) linear infinite backwards;
 }
 
-.stop {
+.stopScroll {
   animation-play-state: paused;
 }
 

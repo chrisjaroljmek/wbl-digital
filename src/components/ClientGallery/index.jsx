@@ -32,7 +32,7 @@ export function ClientGallery() {
     <div className="w-full overflow-hidden">
       <div className="flex" onMouseEnter={onHover} onMouseLeave={onHover}>
         <section
-          className={`section ${isHovered ? "stop" : ""}`}
+          className={`section ${isHovered ? "stopScroll" : ""}`}
           style={{ "--speed": `${speed}ms` }}
         >
           {clients.map(({ image, name, type }, index) => (
@@ -46,7 +46,7 @@ export function ClientGallery() {
           ))}
         </section>
         <section
-          className={`section ${isHovered ? "stop" : ""}`}
+          className={`section ${isHovered ? "stopScroll" : ""}`}
           style={{ "--speed": `${speed}ms` }}
         >
           {clients.map(({ image, name, type }, index) => (

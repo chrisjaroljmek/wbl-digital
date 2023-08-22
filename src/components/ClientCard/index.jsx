@@ -5,9 +5,9 @@ export function ClientCard(props) {
   const { image, name, className } = props;
 
   return (
-    <div class={classnames("relative cursor-pointer", className)}>
-      <div class="absolute inset-0">
-        <div class="w-full h-full transition duration-300 ease-in-out bg-gradient-to-t from-transparent to-black opacity-0 hover:opacity-100"></div>
+    <div className={classnames("relative cursor-pointer", className)}>
+      <div className="absolute inset-0">
+        <div className="w-full h-full transition duration-300 ease-in-out bg-gradient-to-t from-transparent to-black opacity-0 hover:opacity-100"></div>
       </div>
       <img
         className="object-cover max-w-[300px] mr-20"

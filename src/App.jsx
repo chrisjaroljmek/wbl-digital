@@ -110,7 +110,7 @@ export function App() {
       <Section id="3" className="pt-[124px]">
         <WhatWeDo />
       </Section>
-      <Section id="4" className="pt-[124px]">
+      <Section id="4" className="h-screen pt-[124px]">
         <ClientGallery />
       </Section>
       <Section className="flex flex-col justify-center items-center h-screen">
