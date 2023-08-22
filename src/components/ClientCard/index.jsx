@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
-import classnames from "classnames";
 
 export function ClientCard(props) {
   const { image, name, className } = props;
 
   return (
-    <div className={classnames("relative", className)}>
-      <img className="w-48 object-cover" src={image} alt={name} />
+    <div className={className}>
+      <img
+        className="object-cover max-w-[300px] pr-10"
+        src={image}
+        alt={name}
+      />
     </div>
   );
 }

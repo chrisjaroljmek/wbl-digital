@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import classnames from "classnames";
 
-import { ClientCarousel } from "./components/ClientCarousel";
+import { ClientGallery } from "./components/ClientGallery";
 import { ColorToggle } from "./components/ColorToggle";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -110,10 +110,9 @@ export function App() {
       <Section id="3" className="pt-[124px]">
         <WhatWeDo />
       </Section>
-      <Section id="4" className="flex justify-between pt-[124px]">
-        <ClientCarousel />
+      <Section id="4" className="pt-[124px]">
+        <ClientGallery />
       </Section>
-
       <Section className="flex flex-col justify-center items-center h-screen">
         <div className="space-y-8 w-3/4">
           <Logo className="w-1/3" />

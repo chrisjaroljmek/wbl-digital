@@ -1,0 +1,10 @@
+.section {
+  display: flex;
+  animation: slide var(--speed) linear infinite backwards;
+}
+
+@keyframes slide {
+  100% {
+    transform: translateX(-100%);
+  }
+}
