@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { ClientCard } from "../ClientCard";
 
 import companyOne from "../../assets/images/101.svg";
@@ -19,17 +21,34 @@ const clients = [
 import "./index.css";
 
 export function ClientGallery() {
+  const [isHovered, setIsHovered] = useState(false);
   const speed = 25000;
 
+  const onHover = () => {
+    setIsHovered(!isHovered);
+  };
+
   return (
-    <div className="relative w-full overflow-hidden h-[500px]">
-      <div className="flex absolute">
-        <section className="section" style={{ "--speed": `${speed}ms` }}>
+    <div className="w-full overflow-hidden">
+      <div className="flex" onMouseEnter={onHover} onMouseLeave={onHover}>
+        <section
+          className={`section ${isHovered ? "stop" : ""}`}
+          style={{ "--speed": `${speed}ms` }}
+        >
           {clients.map(({ image, name, type }, index) => (
-            <ClientCard key={index} image={image} name={name} type={type} />
+            <ClientCard
+              key={index}
+              image={image}
+              name={name}
+              type={type}
+              isHovered={isHovered}
+            />
           ))}
         </section>
-        <section className="section" style={{ "--speed": `${speed}ms` }}>
+        <section
+          className={`section ${isHovered ? "stop" : ""}`}
+          style={{ "--speed": `${speed}ms` }}
+        >
           {clients.map(({ image, name, type }, index) => (
             <ClientCard key={index} image={image} name={name} type={type} />
           ))}

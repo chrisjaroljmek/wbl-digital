@@ -3,6 +3,10 @@
   animation: slide var(--speed) linear infinite backwards;
 }
 
+.stop {
+  animation-play-state: paused;
+}
+
 @keyframes slide {
   100% {
     transform: translateX(-100%);
