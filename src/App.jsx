@@ -65,24 +65,34 @@ export function App() {
       {/* <Scroll className="fixed bottom-0 right-0 z-40" darkMode={darkMode} /> */}
       <Section id="1" className="h-screen flex items-center justify-center">
         <div className="flex flex-col lg:flex-row">
-          <img className="max-w-xs lg:max-w-2xl mb-6" src={logo} alt="WBL" />
-          <div>
+          <img
+            className="w-80 lg:w-[400px] mb-6 lg:mb-0 lg:mr-8"
+            src={logo}
+            alt="WBL"
+          />
+          <div className="lg:flex lg:flex-col lg:justify-end lg:space-y-2">
             <div className="flex items-end">
-              <span className="text-xl">Engaging web experiences</span>
+              <span className="text-2xl lg:text-4xl">
+                Engaging web experiences
+              </span>
               <div className="bg-green h-2 w-2 rounded-full mb-1.5 ml-1"></div>
             </div>
             <div className="flex items-end">
-              <span className="text-xl">Purposeful digital solutions</span>
+              <span className="text-2xl lg:text-4xl">
+                Purposeful digital solutions
+              </span>
               <div className="bg-darkBlue h-2 w-2 rounded-full mb-1.5 ml-1"></div>
             </div>
             <div className="flex items-end">
-              <span className="text-xl">Empowering web design</span>
+              <span className="text-2xl lg:text-4xl">
+                Empowering web design
+              </span>
               <div className="bg-red h-2 w-2 rounded-full mb-1.5 ml-1"></div>
             </div>
           </div>
         </div>
       </Section>
-      <Section id="2" className="pt-[124px]">
+      <Section id="2">
         <div className="flex flex-col items-center">
           <AboutUs
             size="lg"
