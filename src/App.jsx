@@ -15,6 +15,7 @@ import "./assets/fonts/inter.ttf";
 import "./App.css";
 
 import logo from "./assets/images/wbl.png";
+import envelope from "./assets/icons/envelope.svg";
 
 export function App() {
   const [currentSection, setCurrentSection] = useState("");
@@ -57,12 +58,13 @@ export function App() {
         currentSection={currentSection}
         darkMode={darkMode}
       /> */}
-      <ColorToggle
-        className="fixed bottom-0 w-fit z-40"
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-      />
-      <Scroll darkMode={darkMode} />
+      <div className="flex justify-between fixed bottom-0 w-full z-40">
+        <ColorToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+        <button className="lg:hidden">
+          <img className="w-12 mr-1" src={envelope} alt="Contact us" />
+        </button>
+      </div>
+      <Scroll className="hidden lg:block" darkMode={darkMode} />
       <Section id="1" className="h-screen flex items-center justify-center">
         <div className="flex flex-col lg:flex-row">
           <img
@@ -92,7 +94,7 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section id="2" className="h-screen">
+      <Section id="2">
         <AboutUs
           size="lg"
           title="We produce websites and style brands."

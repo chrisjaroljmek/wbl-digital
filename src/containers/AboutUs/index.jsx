@@ -7,7 +7,7 @@ export function AboutUs(props) {
   return (
     <div
       className={classnames(
-        "flex relative",
+        "flex relative mb-72",
         size === "lg" && "ml-8",
         flip && "justify-end",
         className
@@ -32,8 +32,8 @@ export function AboutUs(props) {
         ></div>
       </div>
       <div className="absolute left-16 top-20">
-        <p className="font-semibold text-3xl w-[300px] mb-2">{title}</p>
-        <p className="ml-4 text-grey text-base w-[280px]">{description}</p>
+        <p className="font-semibold text-3xl w-[280px] mb-2">{title}</p>
+        <p className="ml-4 text-grey text-base w-[260px]">{description}</p>
       </div>
     </div>
   );
