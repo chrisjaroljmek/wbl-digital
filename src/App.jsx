@@ -62,7 +62,7 @@ export function App() {
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
-      {/* <Scroll className="fixed bottom-0 right-0 z-40" darkMode={darkMode} /> */}
+      <Scroll darkMode={darkMode} />
       <Section id="1" className="h-screen flex items-center justify-center">
         <div className="flex flex-col lg:flex-row">
           <img
@@ -92,29 +92,14 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section id="2">
-        <div className="flex flex-col items-center">
-          <AboutUs
-            size="lg"
-            title="We produce websites and style brands."
-            description="We think of a brand as a promise and deliver digital brand experiences
+      <Section id="2" className="h-screen">
+        <AboutUs
+          size="lg"
+          title="We produce websites and style brands."
+          description="We think of a brand as a promise and deliver digital brand experiences
             that users can believe in"
-            darkMode={darkMode}
-          />
-          <AboutUs
-            flip
-            size="md"
-            title="We add purpose."
-            description="We think of a brand as a promise and deliver digital brand experiences"
-            darkMode={darkMode}
-          />
-          <AboutUs
-            size="sm"
-            title="We add purpose."
-            description="We think of a brand as a promise and deliver digital brand experiences"
-            darkMode={darkMode}
-          />
-        </div>
+          darkMode={darkMode}
+        />
       </Section>
       <Section id="3" className="pt-[124px]">
         <WhatWeDo />
