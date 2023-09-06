@@ -58,7 +58,7 @@ export function App() {
         currentSection={currentSection}
         darkMode={darkMode}
       /> */}
-      <div className="flex justify-between fixed bottom-0 w-full z-40">
+      <div className="flex justify-between items-end fixed bottom-0 w-full z-40">
         <ColorToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         <button className="lg:hidden">
           <img className="w-12 mr-1" src={envelope} alt="Contact us" />
@@ -103,10 +103,10 @@ export function App() {
           darkMode={darkMode}
         />
       </Section>
-      <Section id="3" className="pt-[124px]">
+      <Section id="3">
         <WhatWeDo />
       </Section>
-      <Section id="4" className="h-screen"></Section>
+      <Section id="4">Section 4</Section>
       <Section className="flex flex-col justify-center items-center h-screen">
         <div className="space-y-8 w-3/4">
           <img alt="logo" className="w-1/3" src={logo} />
@@ -120,8 +120,8 @@ export function App() {
           </p>
         </div>
       </Section>
-      <Section id="5" className="pt-[124px] h-screen"></Section>
-      {/* <Footer /> */}
+      <Section id="5">Contact Us</Section>
+      <Footer />
     </div>
   );
 }

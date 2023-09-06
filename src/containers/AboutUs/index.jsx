@@ -7,7 +7,7 @@ export function AboutUs(props) {
   return (
     <div
       className={classnames(
-        "flex relative mb-72",
+        "flex relative mb-96",
         size === "lg" && "ml-8",
         flip && "justify-end",
         className
