@@ -11,7 +11,6 @@ import { Scroll } from "./components/Scroll";
 import { Section } from "./components/Section";
 
 import { AboutUs } from "./containers/AboutUs";
-import { SubmissionForm } from "./containers/SubmissionForm";
 import { WhatWeDo } from "./containers/WhatWeDo";
 
 import "./assets/fonts/inter.ttf";
@@ -126,9 +125,7 @@ export function App() {
           </p>
         </div>
       </Section>
-      <Section id="5" className="pt-[124px] h-screen">
-        <SubmissionForm className="relative z-50" />
-      </Section>
+      <Section id="5" className="pt-[124px] h-screen"></Section>
       <Footer />
     </div>
   );
