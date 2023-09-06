@@ -29,8 +29,12 @@ export function ClientGallery() {
   };
 
   return (
-    <div className="w-full overflow-hidden">
-      <div className="flex" onMouseEnter={onHover} onMouseLeave={onHover}>
+    <div className={`w-full overflow-hidden ${isHovered ? "enlarge" : ""}`}>
+      <div
+        className={`flex ${isHovered ? "enlarge" : ""}`}
+        onMouseEnter={onHover}
+        onMouseLeave={onHover}
+      >
         <section
           className={`section ${isHovered ? "stopScroll" : ""}`}
           style={{ "--speed": `${speed}ms` }}
