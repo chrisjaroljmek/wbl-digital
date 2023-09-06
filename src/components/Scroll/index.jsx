@@ -8,20 +8,9 @@ export function Scroll(props) {
   const { darkMode, className } = props;
 
   return (
-    <div
-      className={classnames(
-        "flex flex-col justify-end mb-[2vw] h-[16vw]",
-        className
-      )}
-    >
-      <div className="transform -rotate-90 translate-y-[-2.4vw] uppercase text-[1vw]">
-        Scroll
-      </div>
-      <img
-        className="h-[12vw]"
-        src={darkMode ? arrow : blackArrow}
-        alt="arrow"
-      />
+    <div className={classnames("flex flex-col justify-end", className)}>
+      <div className="transform -rotate-90 uppercase">Scroll</div>
+      <img src={darkMode ? arrow : blackArrow} alt="arrow" />
     </div>
   );
 }
