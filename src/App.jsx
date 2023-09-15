@@ -9,7 +9,6 @@ import { Footer } from "./components/Footer";
 import { Scroll } from "./components/Scroll";
 import { Section } from "./components/Section";
 
-import { AboutUs } from "./containers/AboutUs";
 import { WhatWeDo } from "./containers/WhatWeDo";
 
 import "./assets/fonts/inter.ttf";
@@ -96,25 +95,63 @@ export function App() {
         </div>
       </Section>
       <Section id="2">
-        <AboutUs
-          size="lg"
-          title="We produce websites and style brands."
-          description="We think of a brand as a promise. We create digital brand experiences for users to believe in."
-          darkMode={darkMode}
-        />
-        <AboutUs
-          size="lg"
-          title="We add purpose."
-          description="We gel strategy with creativity. Our web products display form and deliver function."
-          darkMode={darkMode}
-          flip
-        />
-        <AboutUs
-          size="lg"
-          title="We are creatives, coders and strategists."
-          description="We cross disciplines and cross borders. We are your team."
-          darkMode={darkMode}
-        />
+        <div className="flex relative mb-48">
+          <div className="w-48 h-48 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
+            <div
+              className={classnames(
+                "w-[184px] h-[184px]",
+                darkMode === true && "bg-black rounded-full",
+                darkMode === false && "bg-white rounded-full"
+              )}
+            ></div>
+          </div>
+          <div className="absolute">
+            <p className="font-semibold text-3xl">
+              We produce websites and style brands.
+            </p>
+            <p className="text-grey text-base">
+              We think of a brand as a promise. We create digital brand
+              experiences for users to believe in.
+            </p>
+          </div>
+        </div>
+        <div className="flex justify-end relative mb-48">
+          <div className="w-36 h-36 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
+            <div
+              className={classnames(
+                "h-[136px] w-[136px]",
+                darkMode === true && "bg-black rounded-full",
+                darkMode === false && "bg-white rounded-full"
+              )}
+            ></div>
+          </div>
+          <div className="absolute">
+            <p className="font-semibold text-3xl">We add purpose.</p>
+            <p className="text-grey text-base">
+              We gel strategy with creativity. Our web products display form and
+              deliver function.
+            </p>
+          </div>
+        </div>
+        <div className="flex relative mb-48">
+          <div className="w-24 h-24 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
+            <div
+              className={classnames(
+                "h-[88px] w-[88px]",
+                darkMode === true && "bg-black rounded-full",
+                darkMode === false && "bg-white rounded-full"
+              )}
+            ></div>
+          </div>
+          <div className="absolute">
+            <p className="font-semibold text-3xl">
+              We are creatives, coders and strategists.
+            </p>
+            <p className="ml-4 text-grey text-base">
+              We cross disciplines and cross borders. We are your team.
+            </p>
+          </div>
+        </div>
       </Section>
       <Section id="3">
         <WhatWeDo />
