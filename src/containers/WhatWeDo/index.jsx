@@ -2,7 +2,7 @@ import { Skill } from "../../components/Skill";
 
 export function WhatWeDo() {
   return (
-    <div className="px-8">
+    <div className="px-8 lg:px-40">
       <Skill
         color="blue"
         title="Design"

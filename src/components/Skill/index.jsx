@@ -28,7 +28,7 @@ export function Skill(props) {
         className="my-16 mx-8"
       >
         <div className="mr-8 mb-8 w-fit">
-          <p className="relative drop-shadow-xl leading-none whitespace-nowrap z-20 text-3xl">
+          <p className="relative drop-shadow-xl leading-none whitespace-nowrap z-20 text-3xl lg:text-5xl">
             {title}
           </p>
           <div
@@ -47,7 +47,7 @@ export function Skill(props) {
             }}
           ></div>
         </div>
-        <p className="text-grey leading-1 text-xl">{description}</p>
+        <p className="text-grey leading-1 text-xl lg:text-3xl">{description}</p>
       </div>
     </div>
   );

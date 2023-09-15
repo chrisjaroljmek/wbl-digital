@@ -137,7 +137,7 @@ export function App() {
             </p>
           </div>
         </div>
-        <div className="flex relative mb-32 lg:mb-48 mr-32 lg:mr-0">
+        <div className="flex relative mb-32 lg:mb-64 mr-32 lg:mr-0">
           <div className="w-24 h-24 lg:w-48 lg:h-48 display flex items-center justify-center bg-gradient-to-tr from-green to-green rounded-full">
             <div
               className={classnames(
@@ -158,7 +158,7 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section className="flex flex-col items-center" id="3">
+      <Section className="" id="3">
         <WhatWeDo />
       </Section>
       <Section id="4">
