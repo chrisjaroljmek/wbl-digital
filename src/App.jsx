@@ -94,9 +94,12 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section className="flex flex-col items-center lg:items-start" id="2">
+      <Section
+        className="flex flex-col items-center lg:items-start lg:px-64"
+        id="2"
+      >
         <div className="flex relative mb-32 lg:mb-48">
-          <div className="w-48 h-48 lg:w-80 lg:h-80 mr-32 lg:mr-0 lg:ml-32 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
+          <div className="w-48 h-48 lg:w-80 lg:h-80 mr-32 lg:mr-0 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
             <div
               className={classnames(
                 "w-[184px] lg:w-[312px] h-[184px] lg:h-[312px]",
@@ -105,17 +108,17 @@ export function App() {
               )}
             ></div>
           </div>
-          <div className="absolute top-10 left-16 lg:top-28 lg:left-64">
+          <div className="absolute top-10 left-16 lg:top-28 lg:left-32">
             <p className="font-semibold text-3xl lg:text-5xl drop-shadow-2xl lg:w-[500px]">
               We produce websites and style brands.
             </p>
-            <p className="text-grey text-3xl mt-2 ml-48 hidden lg:block w-[500px]">
+            <p className="text-grey text-3xl mt-2 ml-48 hidden lg:block min-w-[500px]">
               We think of a brand as a promise. We create digital brand
               experiences for users to believe in.
             </p>
           </div>
         </div>
-        <div className="lg:flex lg:justify-end lg:w-full ml-32 lg:ml-0 relative mb-32 lg:mb-48 lg:pr-48">
+        <div className="lg:flex lg:justify-end lg:w-full ml-32 lg:ml-0 relative mb-32 lg:mb-48">
           <div className="w-36 h-36 lg:w-64 lg:h-64 display flex items-center justify-center bg-gradient-to-tr from-red to-orange rounded-full">
             <div
               className={classnames(
@@ -125,7 +128,7 @@ export function App() {
               )}
             ></div>
           </div>
-          <div className="absolute top-4 right-12 lg:top-20 lg:right-[440px] w-[300px] text-right lg:text-left drop-shadow-2xl">
+          <div className="absolute top-4 right-12 lg:top-20 lg:right-[260px] w-[300px] text-right lg:text-left drop-shadow-2xl">
             <p className="font-semibold text-3xl lg:text-5xl lg:w-[600px]">
               We are creatives, coders and strategists.
             </p>
@@ -134,7 +137,7 @@ export function App() {
             </p>
           </div>
         </div>
-        <div className="flex relative mb-32 lg:mb-48 mr-32 lg:mr-0 lg:ml-32">
+        <div className="flex relative mb-32 lg:mb-48 mr-32 lg:mr-0">
           <div className="w-24 h-24 lg:w-48 lg:h-48 display flex items-center justify-center bg-gradient-to-tr from-green to-green rounded-full">
             <div
               className={classnames(
