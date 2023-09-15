@@ -7,7 +7,8 @@ export function AboutUs(props) {
   return (
     <div
       className={classnames(
-        "flex w-8/12 relative mb-48",
+        "flex relative mb-48",
+        size === "lg" && "ml-8",
         flip && "justify-end",
         className
       )}
@@ -15,28 +16,24 @@ export function AboutUs(props) {
       <div
         className={classnames(
           "display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue  rounded-full",
-          size === "sm" && "h-[18vw] w-[18vw]",
-          size === "md" && "h-[24vw] w-[24vw]",
-          size === "lg" && "h-[30vw] w-[30vw]"
+          size === "sm" && "w-24 h-24",
+          size === "md" && "w-48 h-48",
+          size === "lg" && "w-48 h-48"
         )}
       >
         <div
           className={classnames(
             darkMode === true && "bg-black rounded-full",
-            darkMode === false && "bg-white  rounded-full",
-            size === "sm" && "h-[17.3vw] w-[17.3vw]",
-            size === "md" && "h-[23.3vw] w-[23.3vw]",
-            size === "lg" && "h-[29.3vw] w-[29.3vw]"
+            darkMode === false && "bg-white rounded-full",
+            size === "sm" && "w-[88px] h-[88px]",
+            size === "md" && "w-[184px] h-[184px]",
+            size === "lg" && "w-[184px] h-[184px]"
           )}
         ></div>
       </div>
-      <div className="absolute top-[10vw] left-[17vw]">
-        <p className="text-[4vw] font-semibold leading-[4.5vw] w-[44vw] drop-shadow-xl">
-          {title}
-        </p>
-        <p className="text-[2.8vw] leading-[3.5vw] ml-[9vw] mt-[1.5vw] text-grey w-[50vw]">
-          {description}
-        </p>
+      <div className="absolute left-16 top-20">
+        <p className="font-semibold text-3xl w-[280px] mb-2">{title}</p>
+        <p className="ml-4 text-grey text-base w-[260px]">{description}</p>
       </div>
     </div>
   );

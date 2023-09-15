@@ -14,22 +14,14 @@ export function ColorToggle(props) {
   return (
     <div
       className={classnames(
-        "flex space-x-[1vw] cursor-pointer p-2 drop-shadow-sm rounded-full",
-        darkMode ? "bg-dark-bg" : "bg-light-bg",
+        "cursor-pointer p-2 drop-shadow-sm rounded-full",
+        // darkMode ? "bg-dark-bg" : "bg-light-bg",
         className
       )}
       onClick={onColorToggle}
     >
-      <img
-        className={classnames("h-[3vw]", darkMode && "opacity-40")}
-        src={sun}
-        alt="light"
-      />
-      <img
-        className={classnames("h-[3vw]", !darkMode && "opacity-40")}
-        src={moon}
-        alt="dark"
-      />
+      <img className={classnames("mb-2")} src={sun} alt="light" />
+      <img src={moon} alt="dark" />
     </div>
   );
 }

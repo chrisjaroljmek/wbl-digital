@@ -25,15 +25,15 @@ export function Skill(props) {
       <div
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        className="flex my-16 mx-8"
+        className="my-16 mx-8"
       >
-        <div className="mr-8">
-          <p className="relative drop-shadow-xl text-[4vw] leading-none whitespace-nowrap z-20">
+        <div className="mr-8 mb-8 w-fit">
+          <p className="relative drop-shadow-xl leading-none whitespace-nowrap z-20 text-3xl">
             {title}
           </p>
           <div
             className={classnames(
-              "mt-1",
+              "mt-1 w-full",
               hover && color === "blue" && "bg-darkBlue",
               hover && color === "green" && "bg-green",
               hover && color === "red" && "bg-red",
@@ -47,7 +47,7 @@ export function Skill(props) {
             }}
           ></div>
         </div>
-        <p className="text-[2.8vw] text-grey leading-none">{description}</p>
+        <p className="text-grey leading-1 text-xl">{description}</p>
       </div>
     </div>
   );

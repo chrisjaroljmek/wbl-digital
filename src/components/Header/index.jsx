@@ -1,12 +1,10 @@
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-import { Logo } from "../Logo";
+import logo from "../../assets/images/wbl.png";
 
 export function Header(props) {
   const { currentSection, darkMode, className } = props;
-
-  console.log(currentSection);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -22,7 +20,6 @@ export function Header(props) {
   return (
     <header
       className={classnames(
-
         "flex items-center justify-between w-full p-6",
         darkMode ? "bg-dark-bg" : "bg-light-bg",
 
@@ -37,10 +34,10 @@ export function Header(props) {
         )}
         onClick={() => scrollToSection("1")}
       >
-        <Logo className="w-[8vw] pb-2" />
+        <img alt="logo" src={logo} />
       </div>
 
-      <div className={classnames("space-x-[4vw] text-[1vw]")}>
+      <div>
         {buttons.map(({ sectionId, label, color }, index) => (
           <button
             key={index}
@@ -55,7 +52,7 @@ export function Header(props) {
         ))}
         <button
           className={classnames(
-            "uppercase border-[0.3vw] border-red px-[2.8vw] py-[1.2vw] rounded-full",
+            "uppercase border-red rounded-full",
             darkMode
               ? "text-dark-text border-red"
               : "text-light-text border-red"
