@@ -19,7 +19,7 @@ export function WhatWeDo() {
         description="We love to code from the ground up. React is our go-to platform. But sometimes the best solution is a low-code CMS. We are experts in WordPress, Wix, Shopify, Squarespace. We match the tech to your web product."
       />
       <Skill
-        color="red"
+        color="orange"
         title="Iterate and optimise"
         description="The web landscape is constantly developing in response to the way users interact. At wbl we iterate to upgrade, improve and enhance. People want to engage seamlessly and effortlessly with your brand online. We strive to deliver that experience."
       />

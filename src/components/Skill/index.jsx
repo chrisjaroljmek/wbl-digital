@@ -37,6 +37,7 @@ export function Skill(props) {
               hover && color === "blue" && "bg-darkBlue",
               hover && color === "green" && "bg-green",
               hover && color === "red" && "bg-red",
+              hover && color === "orange" && "bg-orange",
               !hover && "bg-grey"
             )}
             style={{
