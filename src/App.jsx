@@ -94,9 +94,9 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section id="2">
-        <div className="flex relative mb-48">
-          <div className="w-48 h-48 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
+      <Section className="flex flex-col items-center" id="2">
+        <div className="flex relative mb-32">
+          <div className="w-48 h-48 mr-32 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
             <div
               className={classnames(
                 "w-[184px] h-[184px]",
@@ -105,18 +105,18 @@ export function App() {
               )}
             ></div>
           </div>
-          <div className="absolute">
-            <p className="font-semibold text-3xl">
+          <div className="absolute top-10 left-16">
+            <p className="font-semibold text-3xl drop-shadow-2xl">
               We produce websites and style brands.
             </p>
-            <p className="text-grey text-base">
+            <p className="text-grey text-base hidden lg:block">
               We think of a brand as a promise. We create digital brand
               experiences for users to believe in.
             </p>
           </div>
         </div>
-        <div className="flex justify-end relative mb-48">
-          <div className="w-36 h-36 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
+        <div className="ml-32 relative mb-32">
+          <div className="w-36 h-36 display flex items-center justify-center bg-gradient-to-tr from-red to-orange rounded-full">
             <div
               className={classnames(
                 "h-[136px] w-[136px]",
@@ -125,16 +125,17 @@ export function App() {
               )}
             ></div>
           </div>
-          <div className="absolute">
-            <p className="font-semibold text-3xl">We add purpose.</p>
-            <p className="text-grey text-base">
-              We gel strategy with creativity. Our web products display form and
-              deliver function.
+          <div className="absolute top-4 right-12 w-[300px] text-right drop-shadow-2xl">
+            <p className="font-semibold text-3xl">
+              We are creatives, coders and strategists.
+            </p>
+            <p className="text-grey text-base hidden lg:block">
+              We cross disciplines and cross borders. We are your team.
             </p>
           </div>
         </div>
-        <div className="flex relative mb-48">
-          <div className="w-24 h-24 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
+        <div className="flex relative mb-32 mr-32">
+          <div className="w-24 h-24 display flex items-center justify-center bg-gradient-to-tr from-green to-green rounded-full">
             <div
               className={classnames(
                 "h-[88px] w-[88px]",
@@ -143,17 +144,18 @@ export function App() {
               )}
             ></div>
           </div>
-          <div className="absolute">
-            <p className="font-semibold text-3xl">
-              We are creatives, coders and strategists.
+          <div className="absolute top-8 left-12">
+            <p className="font-semibold text-3xl whitespace-nowrap">
+              We add purpose.
             </p>
-            <p className="ml-4 text-grey text-base">
-              We cross disciplines and cross borders. We are your team.
+            <p className="text-grey text-base hidden lg:block">
+              We gel strategy with creativity. Our web products display form and
+              deliver function.
             </p>
           </div>
         </div>
       </Section>
-      <Section id="3">
+      <Section className="flex flex-col items-center" id="3">
         <WhatWeDo />
       </Section>
       <Section id="4">
