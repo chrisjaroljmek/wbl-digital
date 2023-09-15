@@ -99,8 +99,20 @@ export function App() {
         <AboutUs
           size="lg"
           title="We produce websites and style brands."
-          description="We think of a brand as a promise and deliver digital brand experiences
-            that users can believe in"
+          description="We think of a brand as a promise. We create digital brand experiences for users to believe in."
+          darkMode={darkMode}
+        />
+        <AboutUs
+          size="lg"
+          title="We add purpose."
+          description="We gel strategy with creativity. Our web products display form and deliver function."
+          darkMode={darkMode}
+          flip
+        />
+        <AboutUs
+          size="lg"
+          title="We are creatives, coders and strategists."
+          description="We cross disciplines and cross borders. We are your team."
           darkMode={darkMode}
         />
       </Section>
