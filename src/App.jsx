@@ -4,7 +4,7 @@ import classnames from "classnames";
 
 import { ColorToggle } from "./components/ColorToggle";
 import { Footer } from "./components/Footer";
-// import { Header } from "./components/Header";
+import { Header } from "./components/Header";
 import { Scroll } from "./components/Scroll";
 import { Section } from "./components/Section";
 
@@ -77,11 +77,11 @@ export function App() {
         darkMode ? "bg-dark-bg text-dark-text" : "bg-light-bg text-light-text"
       )}
     >
-      {/* <Header
-        className="hidden lg:block fixed top-0 z-40"
+      <Header
+        className="hidden lg:flex fixed top-0 z-50"
         currentSection={currentSection}
         darkMode={darkMode}
-      /> */}
+      />
       <div className="flex justify-between items-end fixed bottom-0 w-full z-40">
         <ColorToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         <button className="lg:hidden">
@@ -190,8 +190,12 @@ export function App() {
           Our clients.
         </p>
         <div className="relative h-[572px] w-[440px] mb-12">
-          <div className="flex items-center whitespace-nowrap absolute right-0 w-96 object-cover z-40 shadow-2xl">
-            <img src={companies[0].img} alt={companies[0].name} />
+          <div className="flex items-center whitespace-nowrap absolute right-0 w-96 object-cover z-40">
+            <img
+              className="shadow-2xl"
+              src={companies[0].img}
+              alt={companies[0].name}
+            />
             <div className="ml-12">
               <p className="text-4xl font-semibold">{companies[0].name}</p>
               <p className="text-2xl">{companies[0].description}</p>
@@ -214,7 +218,7 @@ export function App() {
               <p className="text-2xl">{companies[2].description}</p>
             </div>
             <img
-              className="w-96"
+              className="w-96 shadow-2xl"
               src={companies[2].img}
               alt={companies[2].name}
             />
@@ -231,7 +235,11 @@ export function App() {
         </div>
         <div className="relative h-[572px] w-[440px] mb-12">
           <div className="flex items-center whitespace-nowrap absolute right-0 w-96 object-cover z-40 shadow-2xl">
-            <img src={companies[1].img} alt={companies[1].name} />
+            <img
+              className="shadow-2xl"
+              src={companies[1].img}
+              alt={companies[1].name}
+            />
             <div className="ml-12">
               <p className="text-4xl font-semibold">{companies[1].name}</p>
               <p className="text-2xl">{companies[1].description}</p>

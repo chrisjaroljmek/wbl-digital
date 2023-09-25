@@ -34,10 +34,9 @@ export function Header(props) {
         )}
         onClick={() => scrollToSection("1")}
       >
-        <img alt="logo" src={logo} />
+        <img className="w-24" alt="logo" src={logo} />
       </div>
-
-      <div>
+      <div className="space-x-16">
         {buttons.map(({ sectionId, label, color }, index) => (
           <button
             key={index}
@@ -52,10 +51,8 @@ export function Header(props) {
         ))}
         <button
           className={classnames(
-            "uppercase border-red rounded-full",
-            darkMode
-              ? "text-dark-text border-red"
-              : "text-light-text border-red"
+            "uppercase rounded-full border-2 border-red px-8 py-3",
+            darkMode ? "text-dark-text" : "text-light-text"
           )}
           onClick={() => scrollToSection("5")}
         >
