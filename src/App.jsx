@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import classnames from "classnames";
 
-import { Clients } from "./components/Clients";
 import { ColorToggle } from "./components/ColorToggle";
 import { Footer } from "./components/Footer";
 // import { Header } from "./components/Header";
@@ -14,8 +13,27 @@ import { WhatWeDo } from "./containers/WhatWeDo";
 import "./assets/fonts/inter.ttf";
 import "./App.css";
 
+import companyOne from "./assets/images/101.svg";
+import companyTwo from "./assets/images/circleart.svg";
+import companyThree from "./assets/images/munchfit.svg";
+
 import logo from "./assets/images/wbl.png";
+
 import envelope from "./assets/icons/envelope.svg";
+
+const companies = [
+  {
+    name: "Munch Fit",
+    description: "Food Delivery E-Commerce",
+    img: companyThree,
+  },
+  {
+    name: "Circle Art Gallery",
+    description: "East African Art",
+    img: companyTwo,
+  },
+  { name: "101 Ways", description: "Climate Sector Campaign", img: companyOne },
+];
 
 export function App() {
   const [currentSection, setCurrentSection] = useState("");
@@ -54,7 +72,7 @@ export function App() {
       )}
     >
       {/* <Header
-        className="fixed top-0 z-40"
+        className="hidden lg:block fixed top-0 z-40"
         currentSection={currentSection}
         darkMode={darkMode}
       /> */}
@@ -99,7 +117,7 @@ export function App() {
         id="2"
       >
         <div className="flex relative mb-32 lg:mb-48">
-          <div className="w-48 h-48 lg:w-80 lg:h-80 mr-32 lg:mr-0 display flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
+          <div className="w-48 h-48 lg:w-80 lg:h-80 mr-32 lg:mr-0 flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue rounded-full">
             <div
               className={classnames(
                 "w-[184px] lg:w-[312px] h-[184px] lg:h-[312px]",
@@ -119,7 +137,7 @@ export function App() {
           </div>
         </div>
         <div className="lg:flex lg:justify-end lg:w-full ml-32 lg:ml-0 relative mb-32 lg:mb-48">
-          <div className="w-36 h-36 lg:w-64 lg:h-64 display flex items-center justify-center bg-gradient-to-tr from-red to-orange rounded-full">
+          <div className="w-36 h-36 lg:w-64 lg:h-64 flex items-center justify-center bg-gradient-to-tr from-red to-orange rounded-full">
             <div
               className={classnames(
                 "h-[136px] lg:h-[248px] w-[136px] lg:w-[248px]",
@@ -138,7 +156,7 @@ export function App() {
           </div>
         </div>
         <div className="flex relative mb-32 lg:mb-64 mr-32 lg:mr-0">
-          <div className="w-24 h-24 lg:w-48 lg:h-48 display flex items-center justify-center bg-gradient-to-tr from-green to-green rounded-full">
+          <div className="w-24 h-24 lg:w-48 lg:h-48 flex items-center justify-center bg-gradient-to-tr from-green to-yellow rounded-full">
             <div
               className={classnames(
                 "h-[88px] w-[88px] lg:h-[184px] lg:w-[184px]",
@@ -158,11 +176,71 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section className="" id="3">
+      <Section id="3" className="mb-48">
         <WhatWeDo />
       </Section>
-      <Section id="4">
-        <Clients />
+      <Section id="4" className="lg:px-40">
+        <p className="font-semibold text-3xl lg:text-5xl text-right w-full">
+          Our clients.
+        </p>
+        <div className="relative h-[572px] w-[440px] mb-12">
+          <div className="flex items-center whitespace-nowrap absolute right-0 w-96 object-cover z-40 shadow-2xl">
+            <img src={companies[0].img} alt={companies[0].name} />
+            <div className="ml-12">
+              <p className="text-4xl font-semibold">{companies[0].name}</p>
+              <p className="text-2xl">{companies[0].description}</p>
+            </div>
+          </div>
+          <div className="absolute bottom-0 flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue h-[510px] w-96">
+            <div
+              className={classnames(
+                "w-[184px] lg:w-[376px] h-[184px] lg:h-[502px]",
+                darkMode === true && "bg-black",
+                darkMode === false && "bg-white"
+              )}
+            ></div>
+          </div>
+        </div>
+        <div className="relative h-[572px] w-full mb-12">
+          <div className="flex items-center whitespace-nowrap absolute right-16 object-cover z-40 shadow-2xl">
+            <div className="mr-12 text-right">
+              <p className="text-4xl font-semibold">{companies[2].name}</p>
+              <p className="text-2xl">{companies[2].description}</p>
+            </div>
+            <img
+              className="w-96"
+              src={companies[2].img}
+              alt={companies[2].name}
+            />
+          </div>
+          <div className="absolute bottom-0 right-0 flex items-center justify-center bg-gradient-to-tr from-red to-orange h-[510px] w-96">
+            <div
+              className={classnames(
+                "w-[184px] lg:w-[376px] h-[184px] lg:h-[502px]",
+                darkMode === true && "bg-black",
+                darkMode === false && "bg-white"
+              )}
+            ></div>
+          </div>
+        </div>
+        <div className="relative h-[572px] w-[440px] mb-12">
+          <div className="flex items-center whitespace-nowrap absolute right-0 w-96 object-cover z-40 shadow-2xl">
+            <img src={companies[1].img} alt={companies[1].name} />
+            <div className="ml-12">
+              <p className="text-4xl font-semibold">{companies[1].name}</p>
+              <p className="text-2xl">{companies[1].description}</p>
+            </div>
+          </div>
+          <div className="absolute bottom-0 flex items-center justify-center bg-gradient-to-tr from-green to-yellow h-[510px] w-96">
+            <div
+              className={classnames(
+                "w-[184px] lg:w-[376px] h-[184px] lg:h-[502px]",
+                darkMode === true && "bg-black",
+                darkMode === false && "bg-white"
+              )}
+            ></div>
+          </div>
+        </div>
       </Section>
       <Section className="flex flex-col justify-center items-center h-screen">
         <div className="space-y-8 w-3/4">
