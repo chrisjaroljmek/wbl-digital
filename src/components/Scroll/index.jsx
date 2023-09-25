@@ -10,11 +10,11 @@ export function Scroll(props) {
   return (
     <div
       className={classnames(
-        "fixed bottom-3 right-0 flex flex-col justify-between items-center w-10 h-52",
+        "fixed bottom-4 right-0 flex flex-col items-center justify-center h-56",
         className
       )}
     >
-      <div className="transform -rotate-90 uppercase">Scroll</div>
+      <div className="transform -rotate-90 uppercase w-fit mb-8">Scroll</div>
       <img className="w-4" src={darkMode ? arrow : blackArrow} alt="arrow" />
     </div>
   );

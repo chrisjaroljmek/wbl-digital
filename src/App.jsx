@@ -88,7 +88,7 @@ export function App() {
           <img className="w-12 mr-1" src={envelope} alt="Contact us" />
         </button>
       </div>
-      <Scroll className="hidden lg:block" darkMode={darkMode} />
+      <Scroll className="hidden lg:flex" darkMode={darkMode} />
       <Section id="1" className="h-screen flex items-center justify-center">
         <div className="flex flex-col lg:flex-row">
           <img
@@ -291,7 +291,6 @@ export function App() {
           </div>
         )}
       </Section>
-
       <Footer />
     </div>
   );
