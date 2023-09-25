@@ -21,6 +21,12 @@ import logo from "./assets/images/wbl.png";
 
 import envelope from "./assets/icons/envelope.svg";
 
+import logoOne from "./assets/logos/biofoods.png";
+import logoTwo from "./assets/logos/circle_light.png";
+import logoThree from "./assets/logos/munchfit_light.png";
+import logoFour from "./assets/logos/riviere_light.png";
+import logoFive from "./assets/logos/godminster.png";
+
 const companies = [
   {
     name: "Munch Fit",
@@ -242,20 +248,50 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section className="flex flex-col justify-center items-center h-screen">
-        <div className="space-y-8 w-3/4">
-          <img alt="logo" className="w-1/3" src={logo} />
-          <p className="font-semibold drop-shadow-xl">
+      <Section className="flex flex-col justify-center items-center h-screen px-48">
+        <div className="space-y-10">
+          <img
+            className="w-80 lg:w-[400px] mb-6 lg:mb-0 lg:mr-8"
+            src={logo}
+            alt="WBL"
+          />
+          <p className="font-semibold text-5xl">
             Specialist Creatives, Tech Professionals, Web Producers, and UX
             Designers.
           </p>
-          <p className="text-grey">
+          <p className="text-grey text-3xl">
             We are WBL. We bring rich, international experience to the art of
             web design
           </p>
         </div>
       </Section>
-      <Section id="5">Contact Us</Section>
+      <Section
+        className="flex flex-col justify-around items-start h-screen px-48"
+        id="5"
+      >
+        <div>
+          <p className="font-semibold text-5xl mb-8">Get in touch.</p>
+          <div className="space-y-4">
+            <p className="text-grey text-3xl">
+              WBL Soho Works 2 Television Centre Building, 101 Wood Lane London
+              W12 7FR
+            </p>
+            <p className="text-grey text-3xl">hello@wbldigital.io</p>
+            <p className="text-grey text-3xl">+44 7815 786 048</p>
+            <p className="text-grey text-3xl">wbldigital.io</p>
+          </div>
+        </div>
+        {darkMode && (
+          <div className="flex items-center justify-between w-full">
+            <img className="h-24" src={logoOne} />
+            <img className="max-h-24" src={logoTwo} />
+            <img className="max-w-fit max-h-12" src={logoThree} />
+            <img className="max-w-fit max-h-20" src={logoFour} />
+            <img className="max-w-fit max-h-20" src={logoFive} />
+          </div>
+        )}
+      </Section>
+
       <Footer />
     </div>
   );
