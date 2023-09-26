@@ -280,13 +280,12 @@ export function App() {
         <div>
           <p className="font-semibold text-5xl mb-8">Get in touch.</p>
           <div className="space-y-4">
-            <p className="text-grey text-3xl">
-              WBL Soho Works 2 Television Centre Building, 101 Wood Lane London
-              W12 7FR
-            </p>
             <p className="text-grey text-3xl">hello@wbldigital.io</p>
             <p className="text-grey text-3xl">+44 7815 786 048</p>
-            <p className="text-grey text-3xl">wbldigital.io</p>
+            <p className="text-grey text-3xl">
+              WBL Soho Works 2 Television Centre Building 101 Wood Lane London
+              W12 7FR
+            </p>
           </div>
         </div>
         {darkMode && (

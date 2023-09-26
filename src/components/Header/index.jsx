@@ -51,7 +51,7 @@ export function Header(props) {
         ))}
         <button
           className={classnames(
-            "uppercase rounded-full border-2 border-red px-8 py-3",
+            "uppercase rounded-full border-2 border-red px-8 py-3 transform hover:scale-105",
             darkMode ? "text-dark-text" : "text-light-text"
           )}
           onClick={() => scrollToSection("5")}
