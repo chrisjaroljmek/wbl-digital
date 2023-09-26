@@ -216,7 +216,7 @@ export function App() {
           </div>
         </div>
         <div className="relative h-[572px] w-full mb-12">
-          <div className="flex items-center whitespace-nowrap absolute right-16 object-cover z-40 shadow-2xl">
+          <div className="flex items-center whitespace-nowrap absolute right-16 object-cover z-40">
             <div className="mr-12 text-right">
               <p className="text-4xl font-semibold">{companies[2].name}</p>
               <p className="text-2xl">{companies[2].description}</p>
