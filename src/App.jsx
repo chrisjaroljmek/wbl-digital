@@ -293,7 +293,7 @@ export function App() {
           </div>
         </div>
         {darkMode && (
-          <div className="flex items-center justify-between w-full">
+          <div className="grid grid-flow-col auto-cols-auto w-full items-center">
             <img className="h-24" src={logoOne} />
             <img className="max-h-24" src={logoTwo} />
             <img className="max-w-fit max-h-12" src={logoThree} />
