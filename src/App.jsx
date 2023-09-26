@@ -123,7 +123,7 @@ export function App() {
         </div>
       </Section>
       <Section
-        className="flex flex-col items-center lg:items-start lg:px-64"
+        className="flex flex-col items-center lg:items-start lg:px-64 lg:pt-28"
         id="2"
       >
         <div className="flex relative mb-32 lg:mb-48">
@@ -165,7 +165,7 @@ export function App() {
             </p>
           </div>
         </div>
-        <div className="flex relative mb-32 lg:mb-64 mr-32 lg:mr-0">
+        <div className="flex relative mb-32 lg:mb-36 mr-32 lg:mr-0">
           <div className="w-24 h-24 lg:w-48 lg:h-48 flex items-center justify-center bg-gradient-to-tr from-green to-yellow rounded-full">
             <div
               className={classnames(
@@ -186,10 +186,10 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section id="3" className="mb-48">
+      <Section id="3" className="mb-48 lg:mt-28 lg:pt-28 lg:mb-16">
         <WhatWeDo />
       </Section>
-      <Section id="4" className="lg:px-40">
+      <Section id="4" className="lg:px-40 lg:pt-28">
         <p className="font-semibold text-3xl lg:text-5xl text-right w-full">
           Our clients.
         </p>
