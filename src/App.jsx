@@ -189,7 +189,7 @@ export function App() {
       <Section id="3" className="mb-48 lg:mt-28 lg:pt-28 lg:mb-16">
         <WhatWeDo />
       </Section>
-      <Section id="4" className="lg:px-40 lg:pt-28">
+      {/* <Section id="4" className="lg:px-40 lg:pt-28">
         <p className="font-semibold text-3xl lg:text-5xl text-right w-full">
           Our clients.
         </p>
@@ -259,26 +259,26 @@ export function App() {
             ></div>
           </div>
         </div>
-      </Section>
-      <Section className="flex flex-col justify-center items-center h-screen px-48">
-        <div className="space-y-10">
+      </Section> */}
+      <Section className="flex flex-col justify-center items-center h-screen px-16 lg:px-48">
+        <div className="space-y-4 lg:space-y-10">
           <img
             className="w-80 lg:w-[400px] mb-6 lg:mb-0 lg:mr-8"
             src={logo}
             alt="WBL"
           />
-          <p className="font-semibold text-5xl">
+          <p className="font-semibold text-3xl lg:text-5xl">
             Specialist Creatives, Tech Professionals, Web Producers, and UX
             Designers.
           </p>
-          <p className="text-grey text-3xl">
+          <p className="text-grey text-xl lg:text-3xl">
             We are WBL. We bring rich, international experience to the art of
             web design
           </p>
         </div>
       </Section>
       <Section
-        className="flex flex-col justify-around items-start h-screen px-48"
+        className="flex flex-col justify-around items-start h-screen px-16 lg:px-48"
         id="5"
       >
         <div>
@@ -293,12 +293,12 @@ export function App() {
           </div>
         </div>
         {darkMode && (
-          <div className="grid grid-flow-col auto-cols-auto w-full items-center">
-            <img className="h-24" src={logoOne} />
-            <img className="max-h-24" src={logoTwo} />
-            <img className="max-w-fit max-h-12" src={logoThree} />
-            <img className="max-w-fit max-h-20" src={logoFour} />
-            <img className="max-w-fit max-h-20" src={logoFive} />
+          <div className="grid grid-cols-2 grid-rows-3 gap-x-8 lg:grid-cols-5 lg:grid-rows-1 items-center place-items-center justify-center w-full">
+            <img className="w-fit h-24" src={logoOne} />
+            <img className="w-fit max-h-24" src={logoTwo} />
+            <img className="w-fit max-h-12" src={logoThree} />
+            <img className="w-fit max-h-20" src={logoFour} />
+            <img className="w-fit max-h-20" src={logoFive} />
           </div>
         )}
       </Section>
