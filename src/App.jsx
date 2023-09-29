@@ -28,8 +28,11 @@ import mobileMenuBlack from "./assets/icons/menu-black.svg";
 
 import logoOne from "./assets/logos/biofoods.png";
 import logoTwo from "./assets/logos/circle_light.png";
+import logoTwoDark from "./assets/logos/circle_dark.png";
 import logoThree from "./assets/logos/munchfit_light.png";
+import logoThreeDark from "./assets/logos/munchfit_black.png";
 import logoFour from "./assets/logos/riviere_light.png";
+import logoFourDark from "./assets/logos/riviere_black_276.png";
 import logoFive from "./assets/logos/godminster.png";
 
 const companies = [
@@ -359,15 +362,23 @@ export function App() {
             </p>
           </div>
         </div>
-        {darkMode && (
-          <div className="grid grid-cols-2 grid-rows-3 gap-x-8 lg:grid-cols-5 lg:grid-rows-1 items-center place-items-center justify-center w-full">
-            <img className="w-fit h-24" src={logoOne} />
-            <img className="w-fit max-h-24" src={logoTwo} />
-            <img className="w-fit max-h-12" src={logoThree} />
-            <img className="w-fit max-h-20" src={logoFour} />
-            <img className="w-fit max-h-20" src={logoFive} />
-          </div>
-        )}
+
+        <div className="grid grid-cols-2 grid-rows-3 gap-x-8 lg:grid-cols-5 lg:grid-rows-1 items-center place-items-center justify-center w-full">
+          <img className="w-fit h-24" src={logoOne} />
+          <img
+            className="w-fit max-h-24"
+            src={darkMode ? logoTwo : logoTwoDark}
+          />
+          <img
+            className="w-fit max-h-12"
+            src={darkMode ? logoThree : logoThreeDark}
+          />
+          <img
+            className="w-fit max-h-20"
+            src={darkMode ? logoFour : logoFourDark}
+          />
+          <img className="w-fit max-h-20" src={logoFive} />
+        </div>
       </Section>
       <Footer />
     </div>
