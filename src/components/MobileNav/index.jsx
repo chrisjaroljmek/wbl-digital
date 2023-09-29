@@ -20,7 +20,7 @@ export function MobileNav({ menu, setMenu, scrollTo, darkMode }) {
         src={logo}
         alt="WBL"
       />
-      <div className="flex flex-col justify-center h-screen text-5xl space-y-8 font-semibold">
+      <div className="flex flex-col justify-center h-screen text-4xl space-y-8 font-semibold">
         <p
           onClick={() => {
             scrollTo("2");
