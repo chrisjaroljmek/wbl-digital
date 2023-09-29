@@ -1,6 +1,9 @@
+import PropTypes from "prop-types";
+import classnames from "classnames";
+
 import logo from "../../assets/images/wbl.png";
 
-export function MobileNav({ menu, setMenu, scrollTo }) {
+export function MobileNav({ menu, setMenu, scrollTo, darkMode }) {
   return (
     <div className="bg-black h-screen z-40 w-full fixed pl-6">
       <img
@@ -49,3 +52,10 @@ export function MobileNav({ menu, setMenu, scrollTo }) {
     </div>
   );
 }
+
+MobileNav.propTypes = {
+  menu: PropTypes.bool.isRequired,
+  setMenu: PropTypes.func.isRequired,
+  scrollTo: PropTypes.func.isRequired,
+  darkMode: PropTypes.bool.isRequired,
+};

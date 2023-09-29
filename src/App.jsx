@@ -104,7 +104,12 @@ export function App() {
         )}
       </button>
       {menu && (
-        <MobileNav menu={menu} setMenu={setMenu} scrollTo={scrollToSection} />
+        <MobileNav
+          menu={menu}
+          setMenu={setMenu}
+          scrollTo={scrollToSection}
+          darkMode={darkMode}
+        />
       )}
       <div className="flex justify-between items-end fixed bottom-0 w-full z-30">
         <ColorToggle darkMode={darkMode} setDarkMode={setDarkMode} />
