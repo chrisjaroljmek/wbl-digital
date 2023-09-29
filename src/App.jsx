@@ -20,6 +20,7 @@ import companyThree from "./assets/images/munchfit.svg";
 import logo from "./assets/images/wbl.png";
 
 import envelope from "./assets/icons/envelope.svg";
+import menu from "./assets/icons/menu.svg";
 
 import logoOne from "./assets/logos/biofoods.png";
 import logoTwo from "./assets/logos/circle_light.png";
@@ -89,6 +90,9 @@ export function App() {
         currentSection={currentSection}
         darkMode={darkMode}
       />
+      <button className="fixed top-0 right-0">
+        <img className="w-12 mr-1 mt-1" src={menu} alt="Menu" />
+      </button>
       <div className="flex justify-between items-end fixed bottom-0 w-full z-40">
         <ColorToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         <button className="lg:hidden" onClick={() => scrollToSection("5")}>
