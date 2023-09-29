@@ -70,6 +70,11 @@ export function App() {
     };
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div
       className={classnames(
@@ -86,7 +91,7 @@ export function App() {
       />
       <div className="flex justify-between items-end fixed bottom-0 w-full z-40">
         <ColorToggle darkMode={darkMode} setDarkMode={setDarkMode} />
-        <button className="lg:hidden">
+        <button className="lg:hidden" onClick={() => scrollToSection("5")}>
           <img className="w-12 mr-1" src={envelope} alt="Contact us" />
         </button>
       </div>
