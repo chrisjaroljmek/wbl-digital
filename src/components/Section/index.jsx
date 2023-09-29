@@ -12,7 +12,7 @@ export function Section(props) {
 }
 
 Section.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   children: PropTypes.any,
   className: PropTypes.string,
 };

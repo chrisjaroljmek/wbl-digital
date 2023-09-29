@@ -102,19 +102,34 @@ export function App() {
           />
           <div className="lg:flex lg:flex-col lg:justify-end lg:space-y-2">
             <div className="flex items-end">
-              <span className="text-2xl lg:text-4xl">
+              <span
+                className={classnames(
+                  "text-2xl lg:text-4xl",
+                  !darkMode && "arial font-semibold tracking-wide"
+                )}
+              >
                 Engaging web experiences
               </span>
               <div className="bg-green h-2 w-2 rounded-full mb-1.5 ml-1"></div>
             </div>
             <div className="flex items-end">
-              <span className="text-2xl lg:text-4xl">
+              <span
+                className={classnames(
+                  "text-2xl lg:text-4xl",
+                  !darkMode && "arial font-semibold tracking-wide"
+                )}
+              >
                 Purposeful digital solutions
               </span>
               <div className="bg-darkBlue h-2 w-2 rounded-full mb-1.5 ml-1"></div>
             </div>
             <div className="flex items-end">
-              <span className="text-2xl lg:text-4xl">
+              <span
+                className={classnames(
+                  "text-2xl lg:text-4xl",
+                  !darkMode && "arial font-semibold tracking-wide"
+                )}
+              >
                 Empowering web design
               </span>
               <div className="bg-red h-2 w-2 rounded-full mb-1.5 ml-1"></div>
@@ -123,7 +138,10 @@ export function App() {
         </div>
       </Section>
       <Section
-        className="flex flex-col items-center lg:items-start lg:px-64 lg:pt-28"
+        className={classnames(
+          "flex flex-col items-center lg:items-start lg:px-64 lg:pt-28",
+          !darkMode && "arial"
+        )}
         id="2"
       >
         <div className="flex relative mb-32 lg:mb-48">

@@ -10,7 +10,7 @@ export default {
           text: "#ffffff",
         },
         light: {
-          bg: "#ffffff",
+          bg: "#fff",
           text: "#16171A",
         },
         white: "#ffffff",

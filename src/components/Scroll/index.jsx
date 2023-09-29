@@ -14,7 +14,14 @@ export function Scroll(props) {
         className
       )}
     >
-      <div className="transform -rotate-90 uppercase w-fit mb-8">Scroll</div>
+      <div
+        className={classnames(
+          "transform -rotate-90 uppercase w-fit mb-8",
+          !darkMode && "arial"
+        )}
+      >
+        Scroll
+      </div>
       <img className="w-4" src={darkMode ? arrow : blackArrow} alt="arrow" />
     </div>
   ) : (
@@ -29,7 +36,12 @@ export function Scroll(props) {
         src={darkMode ? arrow : blackArrow}
         alt="arrow"
       />
-      <div className="transform -rotate-90 uppercase whitespace-nowrap">
+      <div
+        className={classnames(
+          "transform -rotate-90 uppercase whitespace-nowrap",
+          !darkMode && "arial"
+        )}
+      >
         Back to top
       </div>
     </div>

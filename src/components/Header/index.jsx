@@ -42,7 +42,8 @@ export function Header(props) {
             key={index}
             className={classnames(
               "uppercase hover:underline underline-offset-8",
-              currentSection === sectionId && `text-${color} underline`
+              currentSection === sectionId && `text-${color} underline`,
+              darkMode ? "" : "arial"
             )}
             onClick={() => scrollToSection(sectionId)}
           >
@@ -52,7 +53,7 @@ export function Header(props) {
         <button
           className={classnames(
             "uppercase rounded-full border-2 border-red px-8 py-3 transform hover:scale-105",
-            darkMode ? "text-dark-text" : "text-light-text"
+            darkMode ? "text-dark-text" : "text-light-text arial"
           )}
           onClick={() => scrollToSection("5")}
         >
