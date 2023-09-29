@@ -21,8 +21,10 @@ import companyThree from "./assets/images/munchfit.svg";
 import logo from "./assets/images/wbl.png";
 
 import close from "./assets/icons/close.svg";
+import closeBlack from "./assets/icons/close-black.svg";
 import envelope from "./assets/icons/envelope.svg";
 import mobileMenu from "./assets/icons/menu.svg";
+import mobileMenuBlack from "./assets/icons/menu-black.svg";
 
 import logoOne from "./assets/logos/biofoods.png";
 import logoTwo from "./assets/logos/circle_light.png";
@@ -98,9 +100,17 @@ export function App() {
         onClick={() => setMenu(!menu)}
       >
         {menu ? (
-          <img className="w-12 mr-1 mt-1" src={close} alt="Close" />
+          <img
+            className="w-12 mr-1 mt-1"
+            src={darkMode ? close : closeBlack}
+            alt="Close"
+          />
         ) : (
-          <img className="w-12 mr-1 mt-1" src={mobileMenu} alt="Menu" />
+          <img
+            className="w-12 mr-1 mt-1"
+            src={darkMode ? mobileMenu : mobileMenuBlack}
+            alt="Menu"
+          />
         )}
       </button>
       {menu && (

@@ -5,7 +5,12 @@ import logo from "../../assets/images/wbl.png";
 
 export function MobileNav({ menu, setMenu, scrollTo, darkMode }) {
   return (
-    <div className="bg-black h-screen z-40 w-full fixed pl-6">
+    <div
+      className={classnames(
+        "h-screen z-40 w-full fixed pl-6",
+        darkMode ? "bg-dark-bg" : "bg-light-bg"
+      )}
+    >
       <img
         onClick={() => {
           scrollTo("1");
