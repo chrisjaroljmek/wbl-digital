@@ -38,15 +38,15 @@ import logoFive from "./assets/logos/godminster.png";
 const companies = [
   {
     name: "Munch Fit",
-    description: "Food Delivery E-Commerce",
+    description: "Food Delivery",
     img: companyThree,
   },
   {
-    name: "Circle Art Gallery",
+    name: "Circle Art",
     description: "East African Art",
     img: companyTwo,
   },
-  { name: "101 Ways", description: "Climate Sector Campaign", img: companyOne },
+  { name: "101 Ways", description: "Climate Sector", img: companyOne },
 ];
 
 export function App() {
@@ -259,77 +259,87 @@ export function App() {
       <Section id="3" className="mb-48 lg:mt-28 lg:pt-28 lg:mb-16">
         <WhatWeDo darkMode={darkMode} />
       </Section>
-      {/* <Section id="4" className="lg:px-40 lg:pt-28">
-        <p className="font-semibold text-3xl lg:text-5xl text-right w-full">
+      <Section
+        id="4"
+        className="flex flex-col lg:block items-center p-12 lg:px-64 lg:pt-28"
+      >
+        <p className="font-semibold text-3xl lg:text-5xl text-right w-full mb-8 lg:mb-12">
           Our clients.
         </p>
-        <div className="relative h-[572px] w-[440px] mb-12">
-          <div className="flex items-center whitespace-nowrap absolute right-0 w-96 object-cover z-40">
+        {/* Munch Fit */}
+        <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px] mb-12">
+          <div className="lg:flex items-center bottom-0 lg:bottom-auto lg:top-0 whitespace-nowrap absolute right-0 w-64 lg:w-96 object-cover">
             <img
-              className="shadow-2xl"
+              className="shadow-2xl relative z-30"
               src={companies[0].img}
               alt={companies[0].name}
             />
-            <div className="ml-12">
+            <div className="mt-4 lg:mt-0 lg:ml-12">
               <p className="text-4xl font-semibold">{companies[0].name}</p>
               <p className="text-2xl">{companies[0].description}</p>
             </div>
           </div>
-          <div className="absolute bottom-0 flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue h-[510px] w-96">
+          <div className="absolute lg:bottom-0 flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue w-[256px] h-[340px] lg:h-[510px] lg:w-96">
             <div
               className={classnames(
-                "w-[184px] lg:w-[376px] h-[184px] lg:h-[502px]",
+                "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
                 darkMode === true && "bg-black",
                 darkMode === false && "bg-white"
               )}
             ></div>
           </div>
         </div>
-        <div className="relative h-[572px] w-full mb-12">
-          <div className="flex items-center whitespace-nowrap absolute right-16 object-cover z-40">
-            <div className="mr-12 text-right">
+        {/* 101 Ways */}
+        <div className="relative h-[455px] lg:h-[572px] w-[280px] lg:w-full mb-12">
+          <div className="absolute bottom-0 lg:right-64 lg:flex items-center w-64 lg:w-96 whitespace-nowrap object-cover">
+            <div className="hidden lg:block lg:mr-12">
               <p className="text-4xl font-semibold">{companies[2].name}</p>
               <p className="text-2xl">{companies[2].description}</p>
             </div>
             <img
-              className="w-96 shadow-2xl"
+              className="shadow-2xl relative z-30"
               src={companies[2].img}
               alt={companies[2].name}
             />
+            <div className="mt-4 lg:hidden lg:mr-12 text-right">
+              <p className="text-4xl font-semibold">{companies[2].name}</p>
+              <p className="text-2xl">{companies[2].description}</p>
+            </div>
           </div>
-          <div className="absolute bottom-0 right-0 flex items-center justify-center bg-gradient-to-tr from-red to-orange h-[510px] w-96">
+          <div className="absolute top-0 right-0 flex items-center justify-center h-[340px] lg:h-[510px] w-[256px] lg:w-96 bg-gradient-to-tr from-red to-orange">
             <div
               className={classnames(
-                "w-[184px] lg:w-[376px] h-[184px] lg:h-[502px]",
+                "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
                 darkMode === true && "bg-black",
                 darkMode === false && "bg-white"
               )}
             ></div>
           </div>
         </div>
-        <div className="relative h-[572px] w-[440px] mb-12">
-          <div className="flex items-center whitespace-nowrap absolute right-0 w-96 object-cover z-40 shadow-2xl">
+        {/* New Circle Art */}
+        <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px]">
+          <div className="lg:flex items-center bottom-0 lg:bottom-0 whitespace-nowrap absolute right-0 w-64 lg:w-96 object-cover">
             <img
-              className="shadow-2xl"
+              className="shadow-2xl relative z-30"
               src={companies[1].img}
               alt={companies[1].name}
             />
-            <div className="ml-12">
+            <div className="mt-4 lg:ml-12">
               <p className="text-4xl font-semibold">{companies[1].name}</p>
               <p className="text-2xl">{companies[1].description}</p>
             </div>
           </div>
-          <div className="absolute bottom-0 flex items-center justify-center bg-gradient-to-tr from-green to-yellow h-[510px] w-96">
+          <div className="absolute top-0 left-0 flex items-center justify-center bg-gradient-to-tr from-green to-yellow w-[256px] h-[340px] lg:h-[510px] lg:w-96">
             <div
               className={classnames(
-                "w-[184px] lg:w-[376px] h-[184px] lg:h-[502px]",
+                "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
                 darkMode === true && "bg-black",
                 darkMode === false && "bg-white"
               )}
             ></div>
           </div>
         </div>
-      </Section> */}
+      </Section>
       <Section className="flex flex-col justify-center items-center h-screen px-16 lg:px-48">
         <div className="space-y-4 lg:space-y-10">
           <img
@@ -370,7 +380,7 @@ export function App() {
             src={darkMode ? logoTwo : logoTwoDark}
           />
           <img
-            className="w-fit max-h-12"
+            className="w-fit max-h-20"
             src={darkMode ? logoThree : logoThreeDark}
           />
           <img
