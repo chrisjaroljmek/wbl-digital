@@ -52,6 +52,14 @@ export function App() {
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("bg-dark-bg");
+    } else {
+      document.body.classList.remove("bg-dark-bg");
+    }
+  }, [darkMode]);
+
+  useEffect(() => {
     const onScroll = () => {
       const sections = document.querySelectorAll("section");
       let current = "";
