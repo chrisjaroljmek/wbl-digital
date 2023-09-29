@@ -168,7 +168,7 @@ export function App() {
             </p>
           </div>
         </div>
-        <div className="lg:flex lg:justify-end lg:w-full ml-32 lg:ml-0 relative mb-32 lg:mb-48">
+        <div className="lg:flex lg:justify-end lg:w-full ml-36 lg:ml-0 relative mb-32 lg:mb-48">
           <div className="w-36 h-36 lg:w-64 lg:h-64 flex items-center justify-center bg-gradient-to-tr from-red to-orange rounded-full">
             <div
               className={classnames(
@@ -202,7 +202,7 @@ export function App() {
               )}
             ></div>
           </div>
-          <div className="absolute top-8 lg:top-16 lg:mt-2 left-12 lg:left-20">
+          <div className="absolute top-8 lg:top-16 lg:mt-2 left-6 lg:left-20">
             <p className="font-semibold text-3xl lg:text-5xl whitespace-nowrap">
               We add purpose.
             </p>
