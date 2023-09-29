@@ -209,7 +209,7 @@ export function App() {
         </div>
       </Section>
       <Section id="3" className="mb-48 lg:mt-28 lg:pt-28 lg:mb-16">
-        <WhatWeDo />
+        <WhatWeDo darkMode={darkMode} />
       </Section>
       {/* <Section id="4" className="lg:px-40 lg:pt-28">
         <p className="font-semibold text-3xl lg:text-5xl text-right w-full">
