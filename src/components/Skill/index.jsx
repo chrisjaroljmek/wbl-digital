@@ -54,7 +54,7 @@ export function Skill(props) {
           ) : (
             <p
               className={classnames(
-                "relative pb-2 font-black whitespace-nowrap z-20 text-3xl lg:text-5xl bg-gradient-to-br text-transparent bg-clip-text",
+                "relative pb-2 font-black whitespace-nowrap z-20 text-3xl lg:text-6xl bg-gradient-to-br text-transparent bg-clip-text",
                 color === "blue" && "from-red to-darkBlue",
                 color === "green" && "from-red to-yellow",
                 color === "red" && "from-blue to-green",

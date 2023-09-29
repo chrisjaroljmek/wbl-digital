@@ -175,7 +175,7 @@ export function App() {
           </div>
           <div
             className={classnames(
-              "absolute top-4 lg:top-20  w-[300px] text-right lg:text-left drop-shadow-2xl",
+              "absolute top-4 lg:top-20 right-12 w-[300px] text-right lg:text-left drop-shadow-2xl",
               darkMode ? "lg:right-[260px]" : "lg:right-[320px]"
             )}
           >

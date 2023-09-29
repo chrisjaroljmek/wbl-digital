@@ -24,7 +24,7 @@ export function WhatWeDo({ darkMode }) {
       <Skill
         color="orange"
         title="Iterate and optimise"
-        description="The web landscape is constantly developing in response to the way users interact. At wbl we iterate to upgrade, improve and enhance. People want to engage seamlessly and effortlessly with your brand online. We strive to deliver that experience."
+        description="The web landscape is constantly developing in response to the way users interact. At WBL, we iterate to upgrade, improve and enhance. People want to engage seamlessly and effortlessly with your brand online. We strive to deliver that experience."
         darkMode={darkMode}
       />
     </div>
