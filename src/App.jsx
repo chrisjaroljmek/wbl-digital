@@ -74,7 +74,9 @@ export function App() {
     <div
       className={classnames(
         "relative",
-        darkMode ? "bg-dark-bg text-dark-text" : "bg-light-bg text-light-text"
+        darkMode
+          ? "bg-dark-bg text-dark-text"
+          : "bg-light-bg text-light-text arial"
       )}
     >
       <Header
@@ -105,7 +107,7 @@ export function App() {
               <span
                 className={classnames(
                   "text-2xl lg:text-4xl",
-                  !darkMode && "arial font-semibold tracking-wide"
+                  !darkMode && "font-semibold tracking-wide"
                 )}
               >
                 Engaging web experiences
@@ -116,7 +118,7 @@ export function App() {
               <span
                 className={classnames(
                   "text-2xl lg:text-4xl",
-                  !darkMode && "arial font-semibold tracking-wide"
+                  !darkMode && "font-semibold tracking-wide"
                 )}
               >
                 Purposeful digital solutions
@@ -127,7 +129,7 @@ export function App() {
               <span
                 className={classnames(
                   "text-2xl lg:text-4xl",
-                  !darkMode && "arial font-semibold tracking-wide"
+                  !darkMode && "font-semibold tracking-wide"
                 )}
               >
                 Empowering web design
@@ -138,10 +140,7 @@ export function App() {
         </div>
       </Section>
       <Section
-        className={classnames(
-          "flex flex-col items-center lg:items-start lg:px-64 lg:pt-28",
-          !darkMode && "arial"
-        )}
+        className="flex flex-col items-center lg:items-start lg:px-64 lg:pt-28"
         id="2"
       >
         <div className="flex relative mb-32 lg:mb-48">
@@ -174,7 +173,12 @@ export function App() {
               )}
             ></div>
           </div>
-          <div className="absolute top-4 right-12 lg:top-20 lg:right-[260px] w-[300px] text-right lg:text-left drop-shadow-2xl">
+          <div
+            className={classnames(
+              "absolute top-4 lg:top-20  w-[300px] text-right lg:text-left drop-shadow-2xl",
+              darkMode ? "lg:right-[260px]" : "lg:right-[320px]"
+            )}
+          >
             <p className="font-semibold text-3xl lg:text-5xl lg:w-[600px]">
               We are creatives, coders and strategists.
             </p>
