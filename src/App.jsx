@@ -8,6 +8,7 @@ import { Header } from "./components/Header";
 import { MobileNav } from "./components/MobileNav";
 import { Scroll } from "./components/Scroll";
 import { Section } from "./components/Section";
+import { Testimonial } from "./components/Testimonial";
 
 import { WhatWeDo } from "./containers/WhatWeDo";
 
@@ -275,7 +276,7 @@ export function App() {
               alt={companies[0].name}
             />
             <div className="mt-4 lg:mt-0 lg:ml-12">
-              <p className="text-4xl font-semibold">{companies[0].name}</p>
+              <p className="text-5xl font-semibold">{companies[0].name}</p>
               <p className="text-2xl">{companies[0].description}</p>
             </div>
           </div>
@@ -291,9 +292,9 @@ export function App() {
         </div>
         {/* 101 Ways */}
         <div className="relative h-[455px] lg:h-[572px] w-[280px] lg:w-full mb-12">
-          <div className="absolute bottom-0 lg:right-64 lg:flex items-center w-64 lg:w-96 whitespace-nowrap object-cover">
+          <div className="absolute bottom-0 lg:right-80 lg:flex items-center w-64 lg:w-96 whitespace-nowrap object-cover">
             <div className="hidden lg:block lg:mr-12">
-              <p className="text-4xl font-semibold">{companies[2].name}</p>
+              <p className="text-5xl font-semibold">{companies[2].name}</p>
               <p className="text-2xl">{companies[2].description}</p>
             </div>
             <img
@@ -325,7 +326,7 @@ export function App() {
               alt={companies[1].name}
             />
             <div className="mt-4 lg:ml-12">
-              <p className="text-4xl font-semibold">{companies[1].name}</p>
+              <p className="text-5xl font-semibold">{companies[1].name}</p>
               <p className="text-2xl">{companies[1].description}</p>
             </div>
           </div>
@@ -340,7 +341,7 @@ export function App() {
           </div>
         </div>
       </Section>
-      <Section className="flex flex-col justify-center items-center h-screen px-16 lg:px-48">
+      <Section className="flex flex-col justify-center items-center h-screen px-16 lg:px-64">
         <div className="space-y-4 lg:space-y-10">
           <img
             className="w-80 lg:w-[400px] mb-6 lg:mb-0 lg:mr-8"
@@ -357,8 +358,30 @@ export function App() {
           </p>
         </div>
       </Section>
+      <Section className="space-y-4 lg:px-64">
+        <Testimonial
+          name="Gacheri Ndumba, Well Made Strategy"
+          quote="We hired WBL to handle our networks webpage redesign. He not only delivered a sleek new site but also masterfully navigated the needs and interests of 70+ organisations. The after service and support once we began using the website was beyond excellent."
+        />
+        <Testimonial
+          name="Sir George Hollingbery, Arndilly Fishing"
+          quote="Fantastic Christian. Thanks for all the effort …We could do more on it and tbh, we won’t improve it a lot."
+        />
+        <Testimonial
+          name="Spencer Skinner, Active Partners"
+          quote="WBL provides a one-stop-shop for those seeking a stylish/brand driven online presence. It is rare to find such a good grasp of brand, visual design, copy and commercial nous for the rates they charge. Great value."
+        />
+        <Testimonial
+          name="Andrew Martin, Ajar Technology"
+          quote="Everyone is extremely impressed with the quality of our brand and marketing collateral and website. I feel very comfortable pitching at the highest level with pride and confidence in our story which you have shaped and moulded and enabled us to communicate."
+        />
+        <Testimonial
+          name="Thuy Do, Chloe Mansfield Fund"
+          quote="The final product is fantastic – which is a reflection of the hard work and skill that has been invested. I am really excited to launch it!"
+        />
+      </Section>
       <Section
-        className="flex flex-col justify-around items-start h-screen px-16 lg:px-48"
+        className="flex flex-col justify-around items-start h-screen px-16 lg:px-64"
         id="5"
       >
         <div>
