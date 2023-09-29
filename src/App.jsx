@@ -5,6 +5,7 @@ import classnames from "classnames";
 import { ColorToggle } from "./components/ColorToggle";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { MobileNav } from "./components/MobileNav";
 import { Scroll } from "./components/Scroll";
 import { Section } from "./components/Section";
 
@@ -19,8 +20,9 @@ import companyThree from "./assets/images/munchfit.svg";
 
 import logo from "./assets/images/wbl.png";
 
+import close from "./assets/icons/close.svg";
 import envelope from "./assets/icons/envelope.svg";
-import menu from "./assets/icons/menu.svg";
+import mobileMenu from "./assets/icons/menu.svg";
 
 import logoOne from "./assets/logos/biofoods.png";
 import logoTwo from "./assets/logos/circle_light.png";
@@ -45,6 +47,7 @@ const companies = [
 export function App() {
   const [currentSection, setCurrentSection] = useState("");
   const [darkMode, setDarkMode] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -90,10 +93,20 @@ export function App() {
         currentSection={currentSection}
         darkMode={darkMode}
       />
-      <button className="fixed top-0 right-0">
-        <img className="w-12 mr-1 mt-1" src={menu} alt="Menu" />
+      <button
+        className="fixed top-0 right-0 z-50 lg:hidden"
+        onClick={() => setMenu(!menu)}
+      >
+        {menu ? (
+          <img className="w-12 mr-1 mt-1" src={close} alt="Close" />
+        ) : (
+          <img className="w-12 mr-1 mt-1" src={mobileMenu} alt="Menu" />
+        )}
       </button>
-      <div className="flex justify-between items-end fixed bottom-0 w-full z-40">
+      {menu && (
+        <MobileNav menu={menu} setMenu={setMenu} scrollTo={scrollToSection} />
+      )}
+      <div className="flex justify-between items-end fixed bottom-0 w-full z-30">
         <ColorToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         <button className="lg:hidden" onClick={() => scrollToSection("5")}>
           <img className="w-12 mr-1" src={envelope} alt="Contact us" />
@@ -149,7 +162,7 @@ export function App() {
         </div>
       </Section>
       <Section
-        className="flex flex-col items-center lg:items-start lg:px-64 lg:pt-28"
+        className="flex flex-col items-center lg:items-start lg:px-64 pt-24 lg:pt-28"
         id="2"
       >
         <div className="flex relative mb-32 lg:mb-48">
