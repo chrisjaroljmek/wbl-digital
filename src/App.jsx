@@ -409,9 +409,9 @@ export function App() {
         className="flex flex-col justify-around items-start px-16 lg:px-64 mb-16 pt-16 lg:pt-32"
         id="5"
       >
-        <div className="mb-24">
+        <div className="mb-24 w-full">
           <p className="font-semibold text-6xl mb-24">Get in touch.</p>
-          <div className="space-y-10 text-grey text-2xl lg:text-4xl">
+          <div className="space-y-10 text-grey text-2xl lg:text-4xl w-full lg:block flex flex-col items-center">
             <div className="flex items-center">
               <img
                 className={classnames("h-8", darkMode ? "mr-8" : "mr-4")}
@@ -428,7 +428,7 @@ export function App() {
               />
               <span className="whitespace-nowrap">+44 7815 786 048</span>
             </div>
-            <div className="flex">
+            <div className="flex max-w-[268px] lg:max-w-fit">
               <img
                 className={classnames("h-12", darkMode ? "mr-8" : "mr-4")}
                 src={darkMode ? locationDark : locationLight}
@@ -437,7 +437,8 @@ export function App() {
               <span>
                 WBL
                 <br />
-                Soho Works 2 Television Centre Building
+                Soho Works 2<br />
+                Television Centre Building
                 <br />
                 101 Wood Lane London
                 <br />
@@ -449,7 +450,7 @@ export function App() {
 
         <div className="mt-12 grid grid-cols-1 grid-rows-3 gap-y-12 lg:grid-cols-5 lg:grid-rows-1 lg:gap-x-16 items-center place-items-center justify-center w-full">
           <img className="max-h-40" src={logoOne} />
-          <img src={darkMode ? logoTwo : logoTwoDark} />
+          <img className="max-h-32" src={darkMode ? logoTwo : logoTwoDark} />
           <img src={darkMode ? logoThree : logoThreeDark} />
           <img src={darkMode ? logoFour : logoFourDark} />
           <img className="max-h-40 mt-16" src={logoFive} />
