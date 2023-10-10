@@ -264,7 +264,7 @@ export function App() {
         id="4"
         className="flex flex-col lg:block items-center p-12 lg:px-64 lg:pt-28"
       >
-        <p className="font-semibold text-5xl lg:text-5xl text-right w-full mb-16 lg:mb-12">
+        <p className="font-semibold text-5xl lg:text-6xl text-right w-full mb-16 lg:mb-12">
           Our clients.
         </p>
         {/* Munch Fit */}
@@ -400,11 +400,11 @@ export function App() {
         />
       </Section>
       <Section
-        className="flex flex-col justify-around items-start px-16 lg:px-64 mb-16"
+        className="flex flex-col justify-around items-start px-16 lg:px-64 mb-16 pt-16"
         id="5"
       >
         <div className="h-screen lg:h-fit">
-          <p className="font-semibold text-5xl mb-8">Get in touch.</p>
+          <p className="font-semibold text-6xl mb-8">Get in touch.</p>
           <div className="space-y-4">
             <p className="text-grey text-3xl">hello@wbldigital.io</p>
             <p className="text-grey text-3xl">+44 7815 786 048</p>

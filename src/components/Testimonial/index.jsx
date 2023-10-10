@@ -3,6 +3,9 @@ import classNames from "classnames";
 
 import { FadeIn } from "../FadeIn";
 
+import openQuote from "../../assets/icons/openQuote.svg";
+import closeQuote from "../../assets/icons/closeQuote.svg";
+
 export function Testimonial({ name, quote, company, darkMode }) {
   return (
     <FadeIn>
@@ -12,11 +15,21 @@ export function Testimonial({ name, quote, company, darkMode }) {
           darkMode ? "border-white border-2" : "border-black border-4 "
         )}
       >
-        <p className="text-lg lg:text-2xl">"{quote}"</p>
-        <div>
-          <p className="text-sm mb-1 lg:mb-0 lg:text-xl">{name}</p>
-          <p className="text-xs font-semibold lg:text-base">{company}</p>
-        </div>
+        <blockquote className="text-lg lg:text-2xl">
+          <img
+            className="lg:inline h-4 lg:h-6 mb-2 lg:mb-0 lg:mr-2 lg:translate-y-[-8px]"
+            src={openQuote}
+          />
+          <span>{quote}</span>
+          <img
+            className="lg:inline h-4 lg:h-6 mt-2 lg:mt-0 lg:ml-2 "
+            src={closeQuote}
+          />
+        </blockquote>
+        <figcaption>
+          <p className="text-sm lg:text-xl">{name}</p>
+          <cite className="text-xs font-semibold lg:text-base">{company}</cite>
+        </figcaption>
       </div>
     </FadeIn>
   );

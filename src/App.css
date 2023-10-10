@@ -2,6 +2,10 @@
   font-family: "Arial Rounded MT Bold";
 }
 
+.quote {
+  font-family: "Times New Roman";
+}
+
 .fade-in-section {
   opacity: 0;
   transform: translateY(20vh);
