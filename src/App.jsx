@@ -24,8 +24,14 @@ import logo from "./assets/images/wbl.png";
 import close from "./assets/icons/close.svg";
 import closeBlack from "./assets/icons/close-black.svg";
 import envelope from "./assets/icons/envelope.svg";
+import emailDark from "./assets/icons/email-dark.svg";
+import emailLight from "./assets/icons/email-light.svg";
+import locationDark from "./assets/icons/location-dark.svg";
+import locationLight from "./assets/icons/location-light.svg";
 import mobileMenu from "./assets/icons/menu.svg";
 import mobileMenuBlack from "./assets/icons/menu-black.svg";
+import phoneDark from "./assets/icons/phone-dark.svg";
+import phoneLight from "./assets/icons/phone-light.svg";
 
 import logoOne from "./assets/logos/biofoods.png";
 import logoTwo from "./assets/logos/circle_light.png";
@@ -400,22 +406,48 @@ export function App() {
         />
       </Section>
       <Section
-        className="flex flex-col justify-around items-start px-16 lg:px-64 mb-16 pt-16"
+        className="flex flex-col justify-around items-start px-16 lg:px-64 mb-16 pt-16 lg:pt-32"
         id="5"
       >
-        <div className="h-screen lg:h-fit">
-          <p className="font-semibold text-6xl mb-8">Get in touch.</p>
-          <div className="space-y-4">
-            <p className="text-grey text-3xl">hello@wbldigital.io</p>
-            <p className="text-grey text-3xl">+44 7815 786 048</p>
-            <p className="text-grey text-3xl">
-              WBL Soho Works 2 Television Centre Building 101 Wood Lane London
-              W12 7FR
-            </p>
+        <div className="mb-24">
+          <p className="font-semibold text-6xl mb-24">Get in touch.</p>
+          <div className="space-y-10 text-grey text-2xl lg:text-4xl">
+            <div className="flex items-center">
+              <img
+                className={classnames("h-8", darkMode ? "mr-8" : "mr-4")}
+                src={darkMode ? emailDark : emailLight}
+                alt="Email"
+              />
+              <span className="pb-1">hello@wbldigital.io</span>
+            </div>
+            <div className="flex items-center">
+              <img
+                className={classnames("h-10", darkMode ? "mr-8" : "mr-4")}
+                src={darkMode ? phoneDark : phoneLight}
+                alt="Telephone"
+              />
+              <span className="whitespace-nowrap">+44 7815 786 048</span>
+            </div>
+            <div className="flex">
+              <img
+                className={classnames("h-12", darkMode ? "mr-8" : "mr-4")}
+                src={darkMode ? locationDark : locationLight}
+                alt="Email"
+              />
+              <span>
+                WBL
+                <br />
+                Soho Works 2 Television Centre Building
+                <br />
+                101 Wood Lane London
+                <br />
+                W12 7FR
+              </span>
+            </div>
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 grid-rows-3 gap-y-12 lg:grid-cols-5 lg:grid-rows-1 lg:gap-x-16 items-center place-items-center justify-center w-full">
+        <div className="mt-12 grid grid-cols-1 grid-rows-3 gap-y-12 lg:grid-cols-5 lg:grid-rows-1 lg:gap-x-16 items-center place-items-center justify-center w-full">
           <img className="max-h-40" src={logoOne} />
           <img src={darkMode ? logoTwo : logoTwoDark} />
           <img src={darkMode ? logoThree : logoThreeDark} />
