@@ -4,7 +4,6 @@ import classnames from "classnames";
 
 import { ColorToggle } from "./components/ColorToggle";
 import { FadeIn } from "./components/FadeIn";
-import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { MobileNav } from "./components/MobileNav";
 import { Scroll } from "./components/Scroll";
@@ -265,20 +264,22 @@ export function App() {
         id="4"
         className="flex flex-col lg:block items-center p-12 lg:px-64 lg:pt-28"
       >
-        <p className="font-semibold text-3xl lg:text-5xl text-right w-full mb-8 lg:mb-12">
+        <p className="font-semibold text-5xl lg:text-5xl text-right w-full mb-16 lg:mb-12">
           Our clients.
         </p>
         {/* Munch Fit */}
         <FadeIn>
-          <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px] mb-12">
+          <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px] mb-16 lg:mb-12">
             <div className="lg:flex items-center bottom-0 lg:bottom-auto lg:top-0 whitespace-nowrap absolute right-0 w-64 lg:w-96 object-cover">
               <img
-                className="shadow-2xl relative z-30"
+                className="relative z-30"
                 src={companies[0].img}
                 alt={companies[0].name}
               />
               <div className="mt-4 lg:mt-0 lg:ml-12">
-                <p className="text-5xl font-semibold">{companies[0].name}</p>
+                <p className="text-4xl lg:text-5xl font-semibold">
+                  {companies[0].name}
+                </p>
                 <p className="text-2xl">{companies[0].description}</p>
               </div>
             </div>
@@ -286,8 +287,7 @@ export function App() {
               <div
                 className={classnames(
                   "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
-                  darkMode === true && "bg-black",
-                  darkMode === false && "bg-white"
+                  darkMode ? "bg-black" : "bg-white"
                 )}
               ></div>
             </div>
@@ -295,14 +295,14 @@ export function App() {
         </FadeIn>
         {/* 101 Ways */}
         <FadeIn>
-          <div className="relative h-[455px] lg:h-[572px] w-[280px] lg:w-full mb-12">
+          <div className="relative h-[455px] lg:h-[572px] w-[280px] lg:w-full mb-16 lg:mb-12">
             <div className="absolute bottom-0 lg:right-80 lg:flex items-center w-64 lg:w-96 whitespace-nowrap object-cover">
               <div className="hidden lg:block lg:mr-12">
                 <p className="text-5xl font-semibold">{companies[2].name}</p>
                 <p className="text-2xl">{companies[2].description}</p>
               </div>
               <img
-                className="shadow-2xl relative z-30"
+                className="relative z-30"
                 src={companies[2].img}
                 alt={companies[2].name}
               />
@@ -327,12 +327,14 @@ export function App() {
           <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px]">
             <div className="lg:flex items-center bottom-0 lg:bottom-0 whitespace-nowrap absolute right-0 w-64 lg:w-96 object-cover">
               <img
-                className="shadow-2xl relative z-30"
+                className="relative z-30"
                 src={companies[1].img}
                 alt={companies[1].name}
               />
               <div className="mt-4 lg:ml-12">
-                <p className="text-5xl font-semibold">{companies[1].name}</p>
+                <p className="text-4xl lg:text-5xl font-semibold">
+                  {companies[1].name}
+                </p>
                 <p className="text-2xl">{companies[1].description}</p>
               </div>
             </div>
@@ -365,33 +367,43 @@ export function App() {
           </p>
         </div>
       </Section>
-      <Section className="space-y-4 lg:px-64">
+      <Section className="space-y-8 lg:space-y-12 px-16 lg:px-64 mb-16">
         <Testimonial
-          name="Gacheri Ndumba, Well Made Strategy"
+          darkMode={darkMode}
+          name="Gacheri Ndumba"
+          company="Well Made Strategy"
           quote="We hired WBL to handle our networks webpage redesign. He not only delivered a sleek new site but also masterfully navigated the needs and interests of 70+ organisations. The after service and support once we began using the website was beyond excellent."
         />
         <Testimonial
-          name="Sir George Hollingbery, Arndilly Fishing"
+          darkMode={darkMode}
+          name="Sir George Hollingbery"
+          company="Arndilly Fishing"
           quote="Fantastic Christian. Thanks for all the effort …We could do more on it and tbh, we won’t improve it a lot."
         />
         <Testimonial
-          name="Spencer Skinner, Active Partners"
+          darkMode={darkMode}
+          name="Spencer Skinner"
+          company="Active Partners"
           quote="WBL provides a one-stop-shop for those seeking a stylish/brand driven online presence. It is rare to find such a good grasp of brand, visual design, copy and commercial nous for the rates they charge. Great value."
         />
         <Testimonial
-          name="Andrew Martin, Ajar Technology"
+          darkMode={darkMode}
+          name="Andrew Martin"
+          company="Ajar Technology"
           quote="Everyone is extremely impressed with the quality of our brand and marketing collateral and website. I feel very comfortable pitching at the highest level with pride and confidence in our story which you have shaped and moulded and enabled us to communicate."
         />
         <Testimonial
-          name="Thuy Do, Chloe Mansfield Fund"
+          darkMode={darkMode}
+          name="Thuy Do"
+          company="Chloe Mansfield Fund"
           quote="The final product is fantastic – which is a reflection of the hard work and skill that has been invested. I am really excited to launch it!"
         />
       </Section>
       <Section
-        className="flex flex-col justify-around items-start h-screen px-16 lg:px-64"
+        className="flex flex-col justify-around items-start px-16 lg:px-64 mb-16"
         id="5"
       >
-        <div>
+        <div className="h-screen lg:h-fit">
           <p className="font-semibold text-5xl mb-8">Get in touch.</p>
           <div className="space-y-4">
             <p className="text-grey text-3xl">hello@wbldigital.io</p>
@@ -403,24 +415,17 @@ export function App() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 grid-rows-3 gap-x-8 lg:grid-cols-5 lg:grid-rows-1 items-center place-items-center justify-center w-full">
-          <img className="w-fit h-24" src={logoOne} />
-          <img
-            className="w-fit max-h-24"
-            src={darkMode ? logoTwo : logoTwoDark}
-          />
-          <img
-            className="w-fit max-h-20"
-            src={darkMode ? logoThree : logoThreeDark}
-          />
-          <img
-            className="w-fit max-h-20"
-            src={darkMode ? logoFour : logoFourDark}
-          />
-          <img className="w-fit max-h-20" src={logoFive} />
+        <div className="mt-16 grid grid-cols-1 grid-rows-3 gap-y-12 lg:grid-cols-5 lg:grid-rows-1 lg:gap-x-16 items-center place-items-center justify-center w-full">
+          <img className="max-h-40" src={logoOne} />
+          <img src={darkMode ? logoTwo : logoTwoDark} />
+          <img src={darkMode ? logoThree : logoThreeDark} />
+          <img src={darkMode ? logoFour : logoFourDark} />
+          <img className="max-h-40 mt-12" src={logoFive} />
         </div>
       </Section>
-      <Footer />
+      <div className="flex justify-center mb-2 text-grey">
+        <p className="text-xs">© 2023 WBL</p>
+      </div>
     </div>
   );
 }
