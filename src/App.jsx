@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import classnames from "classnames";
 
 import { ColorToggle } from "./components/ColorToggle";
+import { FadeIn } from "./components/FadeIn";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { MobileNav } from "./components/MobileNav";
@@ -268,78 +269,84 @@ export function App() {
           Our clients.
         </p>
         {/* Munch Fit */}
-        <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px] mb-12">
-          <div className="lg:flex items-center bottom-0 lg:bottom-auto lg:top-0 whitespace-nowrap absolute right-0 w-64 lg:w-96 object-cover">
-            <img
-              className="shadow-2xl relative z-30"
-              src={companies[0].img}
-              alt={companies[0].name}
-            />
-            <div className="mt-4 lg:mt-0 lg:ml-12">
-              <p className="text-5xl font-semibold">{companies[0].name}</p>
-              <p className="text-2xl">{companies[0].description}</p>
+        <FadeIn>
+          <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px] mb-12">
+            <div className="lg:flex items-center bottom-0 lg:bottom-auto lg:top-0 whitespace-nowrap absolute right-0 w-64 lg:w-96 object-cover">
+              <img
+                className="shadow-2xl relative z-30"
+                src={companies[0].img}
+                alt={companies[0].name}
+              />
+              <div className="mt-4 lg:mt-0 lg:ml-12">
+                <p className="text-5xl font-semibold">{companies[0].name}</p>
+                <p className="text-2xl">{companies[0].description}</p>
+              </div>
+            </div>
+            <div className="absolute lg:bottom-0 flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue w-[256px] h-[340px] lg:h-[510px] lg:w-96">
+              <div
+                className={classnames(
+                  "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
+                  darkMode === true && "bg-black",
+                  darkMode === false && "bg-white"
+                )}
+              ></div>
             </div>
           </div>
-          <div className="absolute lg:bottom-0 flex items-center justify-center bg-gradient-to-tr from-darkBlue to-blue w-[256px] h-[340px] lg:h-[510px] lg:w-96">
-            <div
-              className={classnames(
-                "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
-                darkMode === true && "bg-black",
-                darkMode === false && "bg-white"
-              )}
-            ></div>
-          </div>
-        </div>
+        </FadeIn>
         {/* 101 Ways */}
-        <div className="relative h-[455px] lg:h-[572px] w-[280px] lg:w-full mb-12">
-          <div className="absolute bottom-0 lg:right-80 lg:flex items-center w-64 lg:w-96 whitespace-nowrap object-cover">
-            <div className="hidden lg:block lg:mr-12">
-              <p className="text-5xl font-semibold">{companies[2].name}</p>
-              <p className="text-2xl">{companies[2].description}</p>
+        <FadeIn>
+          <div className="relative h-[455px] lg:h-[572px] w-[280px] lg:w-full mb-12">
+            <div className="absolute bottom-0 lg:right-80 lg:flex items-center w-64 lg:w-96 whitespace-nowrap object-cover">
+              <div className="hidden lg:block lg:mr-12">
+                <p className="text-5xl font-semibold">{companies[2].name}</p>
+                <p className="text-2xl">{companies[2].description}</p>
+              </div>
+              <img
+                className="shadow-2xl relative z-30"
+                src={companies[2].img}
+                alt={companies[2].name}
+              />
+              <div className="mt-4 lg:hidden lg:mr-12 text-right">
+                <p className="text-4xl font-semibold">{companies[2].name}</p>
+                <p className="text-2xl">{companies[2].description}</p>
+              </div>
             </div>
-            <img
-              className="shadow-2xl relative z-30"
-              src={companies[2].img}
-              alt={companies[2].name}
-            />
-            <div className="mt-4 lg:hidden lg:mr-12 text-right">
-              <p className="text-4xl font-semibold">{companies[2].name}</p>
-              <p className="text-2xl">{companies[2].description}</p>
+            <div className="absolute top-0 right-0 flex items-center justify-center h-[340px] lg:h-[510px] w-[256px] lg:w-96 bg-gradient-to-tr from-red to-orange">
+              <div
+                className={classnames(
+                  "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
+                  darkMode === true && "bg-black",
+                  darkMode === false && "bg-white"
+                )}
+              ></div>
             </div>
           </div>
-          <div className="absolute top-0 right-0 flex items-center justify-center h-[340px] lg:h-[510px] w-[256px] lg:w-96 bg-gradient-to-tr from-red to-orange">
-            <div
-              className={classnames(
-                "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
-                darkMode === true && "bg-black",
-                darkMode === false && "bg-white"
-              )}
-            ></div>
-          </div>
-        </div>
+        </FadeIn>
         {/* New Circle Art */}
-        <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px]">
-          <div className="lg:flex items-center bottom-0 lg:bottom-0 whitespace-nowrap absolute right-0 w-64 lg:w-96 object-cover">
-            <img
-              className="shadow-2xl relative z-30"
-              src={companies[1].img}
-              alt={companies[1].name}
-            />
-            <div className="mt-4 lg:ml-12">
-              <p className="text-5xl font-semibold">{companies[1].name}</p>
-              <p className="text-2xl">{companies[1].description}</p>
+        <FadeIn>
+          <div className="relative h-[455px] w-[280px] lg:h-[572px] lg:w-[440px]">
+            <div className="lg:flex items-center bottom-0 lg:bottom-0 whitespace-nowrap absolute right-0 w-64 lg:w-96 object-cover">
+              <img
+                className="shadow-2xl relative z-30"
+                src={companies[1].img}
+                alt={companies[1].name}
+              />
+              <div className="mt-4 lg:ml-12">
+                <p className="text-5xl font-semibold">{companies[1].name}</p>
+                <p className="text-2xl">{companies[1].description}</p>
+              </div>
+            </div>
+            <div className="absolute top-0 left-0 flex items-center justify-center bg-gradient-to-tr from-green to-yellow w-[256px] h-[340px] lg:h-[510px] lg:w-96">
+              <div
+                className={classnames(
+                  "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
+                  darkMode === true && "bg-black",
+                  darkMode === false && "bg-white"
+                )}
+              ></div>
             </div>
           </div>
-          <div className="absolute top-0 left-0 flex items-center justify-center bg-gradient-to-tr from-green to-yellow w-[256px] h-[340px] lg:h-[510px] lg:w-96">
-            <div
-              className={classnames(
-                "w-[248px] lg:w-[376px] h-[332px] lg:h-[502px]",
-                darkMode === true && "bg-black",
-                darkMode === false && "bg-white"
-              )}
-            ></div>
-          </div>
-        </div>
+        </FadeIn>
       </Section>
       <Section className="flex flex-col justify-center items-center h-screen px-16 lg:px-64">
         <div className="space-y-4 lg:space-y-10">
