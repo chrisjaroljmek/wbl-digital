@@ -420,7 +420,7 @@ export function App() {
           <img src={darkMode ? logoTwo : logoTwoDark} />
           <img src={darkMode ? logoThree : logoThreeDark} />
           <img src={darkMode ? logoFour : logoFourDark} />
-          <img className="max-h-40 mt-12" src={logoFive} />
+          <img className="max-h-40 mt-16" src={logoFive} />
         </div>
       </Section>
       <div className="flex justify-center mb-2 text-grey">
