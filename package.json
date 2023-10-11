@@ -2,7 +2,6 @@
   "name": "wbl-digital",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://chrisjaroljmek.github.io/wbl-digital",
   "type": "module",
   "scripts": {
     "dev": "vite",
