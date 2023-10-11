@@ -437,8 +437,9 @@ export function App() {
               <span>
                 WBL
                 <br />
-                Soho Works 2<br />
-                Television Centre Building
+                Soho Works
+                <br />
+                2 TV Centre Building
                 <br />
                 101 Wood Lane
                 <br />
